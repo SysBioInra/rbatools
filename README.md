@@ -1,3 +1,4 @@
 # RBAtools
 
-To be released in a close future
+Programming interface to resource allocation modelling with the Resource Balance Analysis (RBA) method. 
+
