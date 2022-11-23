@@ -1,0 +1,9 @@
+rbapy
+scipy
+pandas
+numpy
+sbtab>=1.0.6
+python-libsbml
+jxmlease
+swiglpk
+urllib3
