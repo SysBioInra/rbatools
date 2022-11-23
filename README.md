@@ -31,19 +31,25 @@ They are located in this repositories' subdirectory:
     /tutorials/jupyter_notebooks
 
 Please note that rba-models should be obtained (see section "Model availability") and stored in the same directory as this repository, prior to running the notebooks.
+
 #### Example_workflows_rba_tools.ipynb
 This is a Jupyter notebook with example applications and workflows of rbatools with B.subtilis model.
-#### Example_workflows_rba_tools_Ecoli.ipynb
-Same example applications and workflows with E.coli model.
 #### Model_components_information_access.ipynb
-This is a Jupyter notebook with example applications on how to access information on model-components and their relationships.
+
+This is a Jupyter notebook with example applications on how to access information on model-components and their relationships in the B.subtilis model.
+
+#### Example_workflows_rba_tools_Ecoli.ipynb
+Example applications and workflows with E.coli model.
+(Please note significantly longer computation times, than with B.subtilis model)
 
 ## Documentation
 
 ## Running
 
 ### run in own scripts
+
 ### run provided scripts
+
 ### run command-line tool
 
 
