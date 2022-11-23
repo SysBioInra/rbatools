@@ -10,8 +10,8 @@ Navigate into the base directory of rbatools locally on your computer and execut
 
     pip install .
 
-### Install this from PyPI
-
+### Install this from PyPI (once available)
+    pip install rbapy
 
 ## Repository structure
 
