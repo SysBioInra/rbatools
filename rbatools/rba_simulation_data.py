@@ -88,7 +88,7 @@ class SimulationDataRBA(object):
         Imports data from rbatools.RBA_Controler object
         Parameters
         ----------
-        rbaSession : rbatools.RBA_Session
+        rbaSession : rbatools.rba_session.SessionRBA
             Defines from which object to extract the data from
         session_name: str
             Defines the name of the session

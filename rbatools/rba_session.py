@@ -2071,8 +2071,9 @@ class SessionRBA(object):
 
     def build_fba_model(self,rba_derived_biomass_function=True,from_rba_solution=True):
         """
-        Derives and constructs FBA-problem from the RBA-problem and stores the fba_problem. 
-        ProblemFBA object as attribute 'FBA'. (By default non-parsimonious FBA-problem).
+        Derives and constructs FBA-problem from the RBA-problem and stores the 
+        rbatools.fba_problem.ProblemFBA object as attribute 'FBA'. 
+        (By default non-parsimonious FBA-problem)
 
         Parameters
         ----------

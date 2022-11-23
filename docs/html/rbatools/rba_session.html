@@ -1,0 +1,1324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.5.3" />
+<title>rbatools.rba_session API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.name small{font-weight:normal}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title"><code>rbatools.rba_session</code> module</h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="rbatools.rba_session.SessionRBA"><code class="flex name class">
+<span>class <span class="ident">SessionRBA</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>User interface with high level functions to import model, change model,
+different solving methods and results export.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>xml_dir</code></strong> :&ensp;<code>str</code></dt>
+<dd>Directory of imported xml model files</dd>
+<dt><strong><code>model</code></strong> :&ensp;<code>rba.RbaModel</code></dt>
+<dd>RBA model (parsed from xml files), from which matrices are built</dd>
+<dt><strong><code>Problem</code></strong> :&ensp;<a title="rbatools.rba_problem.ProblemRBA" href="rba_problem.html#rbatools.rba_problem.ProblemRBA"><code>ProblemRBA</code></a></dt>
+<dd>RBA Problem</dd>
+<dt><strong><code>Medium</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary with external metabolites and corresponding concentrations</dd>
+<dt><strong><code>ModelStructure</code></strong> :&ensp;<a title="rbatools.rba_model_structure.ModelStructureRBA" href="rba_model_structure.html#rbatools.rba_model_structure.ModelStructureRBA"><code>ModelStructureRBA</code></a></dt>
+<dd>Model structure representation</dd>
+<dt><strong><code>Results</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Simulation results, added if record_results method has been called</dd>
+<dt><strong><code>Parameters</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Simulation parameters, added if record_parameters method has been called</dd>
+<dt><strong><code>SimulationData</code></strong> :&ensp;<a title="rbatools.rba_simulation_data.SimulationDataRBA" href="rba_simulation_data.html#rbatools.rba_simulation_data.SimulationDataRBA"><code>SimulationDataRBA</code></a></dt>
+<dd>SimulationData object, added if write_results method has been called</dd>
+<dt><strong><code>SimulationParameters</code></strong> :&ensp;<a title="rbatools.rba_simulation_parameters.SimulationParametersRBA" href="rba_simulation_parameters.html#rbatools.rba_simulation_parameters.SimulationParametersRBA"><code>SimulationParametersRBA</code></a></dt>
+<dd>SimulationParameters object, added if write_results method has been called</dd>
+<dt><strong><code>ExchangeMap</code></strong> :&ensp; <code>dict</code></dt>
+<dd>Map of all metabolites, the corresponding transport-reactions and stoichiometires</dd>
+<dt><strong><code>ExchangeReactions</code></strong> :&ensp;<code>bool</code> &ndash;&gt; default:<code>False</code></dt>
+<dd>True if exchange reactions have been added via add_exchange_reactions method</dd>
+</dl></section>
+<h3>Methods</h3>
+<dl>
+<dt id="rbatools.rba_session.SessionRBA.__init__"><code class="name flex">
+<span>def <span class="ident">__init__</span></span>(<span>self, xml_dir, lp_solver=&#39;cplex&#39;)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Creates SessionRBA object from files</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>xml_dir</code></strong> :&ensp;<code>str</code></dt>
+<dd>Path to the directory where rba-model files are located.</dd>
+<dt><strong><code>lp_solver</code></strong> :&ensp;<code>str</code></dt>
+<dd>Specifies which LP-solver should be used ('cplex' or 'swiglpk')
+Default: 'cplex'</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.add_exchange_reactions"><code class="name flex">
+<span>def <span class="ident">add_exchange_reactions</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds explicit exchange-reactions of boundary-metabolites to RBA-problem,
+named R_EX_ followed by metabolite name (without M_ prefix).</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.add_parameter_multiplier"><code class="name flex">
+<span>def <span class="ident">add_parameter_multiplier</span></span>(<span>self, model_parameter, rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds a multiplicative coeffiecient for specified model parameter,
+named after provided model_parameter, followed by '_multiplier'.
+This coefficient might be changed from 1 (neutral) to any multiplicative
+term of parameter value.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>model_parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>Model parameter, for which a constant multiplier should be added</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.add_parameter_multipliers_for_enzyme_efficiencies"><code class="name flex">
+<span>def <span class="ident">add_parameter_multipliers_for_enzyme_efficiencies</span></span>(<span>self, enzymes_list=[], default_parameter_ids=[&#39;default_efficiency&#39;, &#39;default_transporter_efficiency&#39;])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds a multiplicative coeffiecient for
+forward- and backward efficiencies
+of provided enzymes. This coefficient might be changed from 1 (neutral)
+to any multiplicative term of parameter value.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>enzymes_list</code></strong> :&ensp;<code>list</code></dt>
+<dd>Model parameter, for which a constant multiplier should be added
+Default: [] &ndash;&gt; then all enzymes are used</dd>
+<dt><strong><code>default_parameter_ids</code></strong> :&ensp;<code>list</code></dt>
+<dd>Specifies the ids of default efficiencies
+Default: ["default_efficiency","default_transporter_efficiency"]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>List of enzyme IDs, for which the multipliers have been added.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.add_reaction"><code class="name flex">
+<span>def <span class="ident">add_reaction</span></span>(<span>self, reaction_id, reactants={}, products={}, reversible=False, rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds reaction to model.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>reaction_id</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of reaction to add.</dd>
+<dt><strong><code>reactants</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Reactants of reaction (Metabolite-IDs as keys and their stoichiometries as values)
+Default: {}</dd>
+<dt><strong><code>products</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Products of reaction (Metabolite-IDs as keys and their stoichiometries as values)
+Default: {}</dd>
+<dt><strong><code>reversible</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether reaction is reversible
+Default: True</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.add_specific_kapps_for_default_kapp_enzyme"><code class="name flex">
+<span>def <span class="ident">add_specific_kapps_for_default_kapp_enzyme</span></span>(<span>self, enzyme=&#39;&#39;, default_parameter_ids=[&#39;default_efficiency&#39;, &#39;default_transporter_efficiency&#39;], rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds
+a specific efficiency
+parameter for enzymes, which are parameterised with the default efficiency.
+Specific parameter is named 'ENZYME_ID_forward_efficiency'/'ENZYME_ID_backward_efficiency' and initially
+defined exactly like the
+default parameter.
+Parameters</p>
+<hr>
+<dl>
+<dt><strong><code>enzyme</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of model enzyme</dd>
+<dt><strong><code>default_parameter_ids</code></strong> :&ensp;<code>list</code></dt>
+<dd>Specifies the ids of default efficiencies
+Default: ["default_efficiency","default_transporter_efficiency"]</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.add_specific_kapps_for_default_kapp_enzymes"><code class="name flex">
+<span>def <span class="ident">add_specific_kapps_for_default_kapp_enzymes</span></span>(<span>self, enzymes_list=[], default_parameter_ids=[&#39;default_efficiency&#39;, &#39;default_transporter_efficiency&#39;], rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds
+a specific efficiency parameter for all enzymes provided as input list of IDs,
+which have
+the default efficiency assigned as efficiency parameter.
+Parameters</p>
+<hr>
+<dl>
+<dt><strong><code>enzymes_list</code></strong> :&ensp;<code>list</code></dt>
+<dd>Model parameter, for which a constant multiplier should be added
+Default: [] &ndash;&gt; then all enzymes are used</dd>
+<dt><strong><code>default_parameter_ids</code></strong> :&ensp;<code>list</code></dt>
+<dd>Specifies the ids of default efficiencies
+Default: ["default_efficiency","default_transporter_efficiency"]</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>List of enzyme IDs, for specific efficiencies have been added.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.apply_gene_knock_out"><code class="name flex">
+<span>def <span class="ident">apply_gene_knock_out</span></span>(<span>self, gene)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Simulates a gene knock out.
+Constrains all variables in the LP-problem (enzymes, other machineries),
+which require this gene(s), to zero.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>gene</code></strong> :&ensp;<code>str</code> or <code>list</code> of <code>strings</code></dt>
+<dd>ID(s) of model-proteins to be knocked out.
+Can either be gene-identifier, represented as ID or ProtoID of
+proteins in rbatools.protein_bloc.ProteinBlock.Elements class
+(depends on whether protein-isoforms are considered).</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.build_fba_model"><code class="name flex">
+<span>def <span class="ident">build_fba_model</span></span>(<span>self, rba_derived_biomass_function=True, from_rba_solution=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Derives and constructs FBA-problem from the RBA-problem and stores the fba_problem.
+ProblemFBA object as attribute 'FBA'. (By default non-parsimonious FBA-problem).</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>rba_derived_biomass_function</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True: A biomass function (named 'R_BIOMASS_targetsRBA'), specific to the current growth rate,
+is added to the problem.
+If False: It is assumed that there exists a biomass function, in the model.</dd>
+<dt><strong><code>from_rba_solution</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True: The biomass-composition, specific to the current solution
+(growth-rate and decision-variable values) is determined.
+If False: The biomass-composition, specific to the current growth-rate
+and the corresponding target-values is defined.</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.build_model_structure"><code class="name flex">
+<span>def <span class="ident">build_model_structure</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Builds model structure object from model xml-files, adds it as
+ModelStructure attribute and stores as json file.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.clear_results_and_parameters"><code class="name flex">
+<span>def <span class="ident">clear_results_and_parameters</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Removes all previosly recorded results and deletes own 'Results'-attribute.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.derive_current_biomass_function"><code class="name flex">
+<span>def <span class="ident">derive_current_biomass_function</span></span>(<span>self, from_rba_solution=False)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns a biomass-function, corresponding to the currently imposed biomass composition in the RBA-model.
+(Since biomass composition is growth-rate dependent, it changes when other growth-rates are set.)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>from_rba_solution</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True: The biomass-composition, specific to the current solution
+(growth-rate and decision-variable values) is determined.
+If False: The biomass-composition, specific to the current growth-rate
+and the corresponding target-values is defined.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>pandas.core.frame.DataFrame with columns "Metabolite" and "Coefficient", indicating metabolic species
+and their respective 'stoichiometric' coefficients in generated biomass function.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.find_max_growth_rate"><code class="name flex">
+<span>def <span class="ident">find_max_growth_rate</span></span>(<span>self, precision=0.001, max=4.0, start_value=nan, recording=False, omit_objective=False, feasible_stati=[&#39;optimal&#39;, &#39;feasible&#39;], try_unscaling_if_sol_status_is_feasible_only_before_unscaling=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Applies dichotomy-search to find the maximal feasible growth-rate.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>precision</code></strong> :&ensp;<code>float</code></dt>
+<dd>Numberic precision with which maximum is approximated.
+Default: 0.00001</dd>
+<dt><strong><code>max</code></strong> :&ensp;<code>float</code></dt>
+<dd>Defines the highest growth rate to be screened for.
+Default: 4.0</dd>
+<dt><strong><code>start_value</code></strong> :&ensp;<code>float</code></dt>
+<dd>Defines the first growth-rate to test during the dichotomy search.
+Default: numpy.nan &ndash;&gt; then the middle between 0 and max is used.</dd>
+<dt><strong><code>recording</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Records intermediate feasible solutions
+while approaching the maximum growth-rate.
+Default: False</dd>
+<dt><strong><code>feasible_stati</code></strong> :&ensp;<code>list</code> of <code>str</code></dt>
+<dd>List with acceptable solution statuses.
+Default: ["optimal","feasible"]</dd>
+<dt><strong><code>try_unscaling_if_sol_status_is_feasible_only_before_unscaling</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If true; the problem will be attempted to be solved without scaling,
+if the scaled problem is feasible but the solution is not feasible
+after unscaling (CPLEX solution-status 5).
+Default: True</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>maximum feasible growth rate as float.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.find_min_substrate_concentration"><code class="name flex">
+<span>def <span class="ident">find_min_substrate_concentration</span></span>(<span>self, metabolite, precision=1e-05, max=100.0, recording=False, feasible_stati=[&#39;optimal&#39;, &#39;feasible&#39;], try_unscaling_if_sol_status_is_feasible_only_before_unscaling=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Applies dichotomy-search to find the minimal feasible concentration of
+growth-substrate in medium, at a previously set growth-rate.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>metabolite</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of metabolite in medium.</dd>
+<dt><strong><code>precision</code></strong> :&ensp;<code>float</code></dt>
+<dd>Numberic precision with which minimum is approximated.
+Default: 0.00001</dd>
+<dt><strong><code>max</code></strong> :&ensp;<code>float</code></dt>
+<dd>Defines the highest concentration rate to be screened for.
+Default: 100</dd>
+<dt><strong><code>recording</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Records intermediate feasible solutions
+while approaching the minimum concentration.
+Default: False</dd>
+<dt><strong><code>feasible_stati</code></strong> :&ensp;<code>list</code> of <code>str</code></dt>
+<dd>List with acceptable solution statuses.
+Default: ["optimal","feasible"]</dd>
+<dt><strong><code>try_unscaling_if_sol_status_is_feasible_only_before_unscaling</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If true; the problem will be attempted to be solved without scaling,
+if the scaled problem is feasible but the solution is not feasible
+after unscaling (CPLEX solution-status 5).
+Default: True</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>minimum feasible growth-substrate concentration as float.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_compartment_information"><code class="name flex">
+<span>def <span class="ident">get_compartment_information</span></span>(<span>self, compartment)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model compartment from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>compartment</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of compartment.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : compartment ID in model (type str)
+'associatedProteins' : proteins localised to compartment (type list)
+'associatedEnzymes' : enzyme located in compartment (type list)
+'associatedReactions' : metabolic reactions located in compartment (type list)
+'associatedMacromolecules' : other macromolecules than proteins (DNA,RNA), located in compartment (type list)
+'Capacity_Constraint' : id of corresponding density constraint.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_compartments"><code class="name flex">
+<span>def <span class="ident">get_compartments</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model compartment-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_constant_enzyme_efficiencies"><code class="name flex">
+<span>def <span class="ident">get_constant_enzyme_efficiencies</span></span>(<span>self, enzymes_list=[], exclude_default=False, default_parameter_ids=[&#39;default_efficiency&#39;, &#39;default_transporter_efficiency&#39;])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns pandas DataFrame with efficiency values of enzymes, which are of parameter type constant.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>enzymes_list</code></strong> :&ensp;<code>list</code></dt>
+<dd>Model parameter, for which a constant multiplier should be added
+Default: [] &ndash;&gt; then all enzymes are used</dd>
+<dt><strong><code>exclude_default</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True enzymes without a specific enzyme capacity are ignored.
+Default: False</dd>
+<dt><strong><code>default_parameter_ids</code></strong> :&ensp;<code>list</code></dt>
+<dd>Specifies the ids of default efficiencies
+Default: ["default_efficiency","default_transporter_efficiency"]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>pandas.DataFrame with columns: 'Enzyme','Forward_efficiency','Backward_efficiency'</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_constraint_saturation"><code class="name flex">
+<span>def <span class="ident">get_constraint_saturation</span></span>(<span>self, constraints=[])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Determines the saturation of model constraints at current solution.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>constraints</code></strong> :&ensp;<code>str</code> or <code>list</code> of <code>str</code></dt>
+<dd>Specifies constraints(s) for which the saturation is to be determined.
+Optional input:
+If not provided all model-constraints are taken</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Pandas DataFrame with constraint-names as indices and the columns
+'LHS', 'RHS', and 'Saturation'.
+'LHS': The sum over the respoctive constraint-row multiplied
+elementwise with the solution vector.
+'RHS': The value of the problem's righthand side, correesponding
+to the respective constraint.
+'Saturation': The saturation of the respective constraint ('LHS'/'RHS').</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_current_parameter_value"><code class="name flex">
+<span>def <span class="ident">get_current_parameter_value</span></span>(<span>self, parameter)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Return current value of model parameter (depending on currently
+set growth-rate and medium-composition).</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of model parameter</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>Float</code></strong> :&ensp;<code>Parameter</code> <code>value</code></dt>
+<dd>&nbsp;</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_density_constraint_information"><code class="name flex">
+<span>def <span class="ident">get_density_constraint_information</span></span>(<span>self, density_constraint)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model density-constraint from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>density_constraint</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of constraint.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : density constraint ID in model (type str)
+'AssociatedCompartment' : ID of compartment this constraint defines the capacity for (type str)
+'Type' : Equality or inequality (type str)
+'CapacityParameterID' :
+ID of density parameter (type str)
+'CapacityParameter' : Definition of capacity parameter (type dict)
+See doc string of rbatools.rba_session.SessionRBA.get_parameter_definition method</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_density_constraints"><code class="name flex">
+<span>def <span class="ident">get_density_constraints</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model density constraint-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_enzyme_constraint_information"><code class="name flex">
+<span>def <span class="ident">get_enzyme_constraint_information</span></span>(<span>self, enzyme_constraint)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model enzyme-capacity constraint from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>enzyme_constraint</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of constraint.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : enzyme-constraint ID in model (type str)
+'AssociatedEnzyme' : ID of enzyme this constraint relates to (type str)
+'AssociatedReaction' : ID of reaction this constraint relates to (type str)
+'Direction': forward or backward efficiency (type str)
+'Type' : Equality or inequality (type str)
+'CapacityParameterID' :
+ID of capacity parameter (type str)
+'CapacityParameter' : Definition of capacity parameter (type dict)
+See doc string of rbatools.rba_session.SessionRBA.get_parameter_definition method</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_enzyme_constraints"><code class="name flex">
+<span>def <span class="ident">get_enzyme_constraints</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model enzyme-capacity constraint-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_enzyme_information"><code class="name flex">
+<span>def <span class="ident">get_enzyme_information</span></span>(<span>self, enzyme)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model enzyme from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>enzyme</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of enzyme.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : enzyme ID in model (type str)
+'OtherIDs' : identifiers of this enzyme in other namespaces (BiGG, KEGG &hellip;) (type dict)
+'Reaction' : associated metabolic reaction (type str)
+'Isozymes' : Other enzymes catalysing the same metabolic reaction (type list)
+'IdenticalEnzymes' : Other enzymatic activities of this enzyme, cellular location ignored. (type list)
+'EnzymesWithIdenticalSubunitComposition' : Other enzymatic activities of this enzyme IN SAME COMPARTMENT. (type list)
+'Subunits' : Which proteins this enzyme is composed of and how many (type dict)
+'EnzymeCompartment' : Location of enzyme (type str)
+'ForwardCapacity_Constraint' : Id of associated forward capacity constraint.
+'BackwardCapacity_Constraint' : Id of associated backward capacity constraint.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_enzymes"><code class="name flex">
+<span>def <span class="ident">get_enzymes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model enzyme-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_feasible_range"><code class="name flex">
+<span>def <span class="ident">get_feasible_range</span></span>(<span>self, variables=[])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Determines the feasible range of model variables or linear combinations of model variables.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>variables</code></strong> :&ensp;<code>str</code> or <code>list</code> of <code>str</code> or <code>dict</code></dt>
+<dd>Specifies variable(s) for which the feasible range is to be determined.
+If str: Feasible range of the respective variable is determined
+If list of str: Feasible range for each variable in list is determined
+(If empty list, all model variables are chosen)
+If dict: Dictionary with user-specified ID of objective as key and dictionary
+with variable IDs as values and stoichiometric coefficients in objective as values.
+{'ID_objective':{'model_variable_1':coeff,'model_variable_2':coeff, &hellip;}}
+Default: []
+All model-variables are taken one by one</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with variable-names or objective-names as keys and other dictionaries as values.
+The 'inner' dictionaries hold keys 'Min' and 'Max'
+with values representing lower and upper bound of feasible range respectively.
+E.g. : {'variableA':{'Min':42 , 'Max':9000},'variableB':{'Min':-9000 , 'Max':-42}&hellip;}
+or {'ID_objective':{'Min':42 , 'Max':9000}}</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_general_model_information"><code class="name flex">
+<span>def <span class="ident">get_general_model_information</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get general model information from ModelStructure</p>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information on model name, organism , author&hellip;</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_macro_molecule_information"><code class="name flex">
+<span>def <span class="ident">get_macro_molecule_information</span></span>(<span>self, macro_molecule)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model macromolecule from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>macro_molecule</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of macro molecule.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : macromolecule ID in model (type str).
+'ProtoID' : location independent macromolecule ID in model (type str). Equals ID without compartment-specific ending.
+'Type' : DNA or RNA (type str)
+'Compartment' : Location of the macromolecule (type str)
+'Composition' : Which building-blocs the macromolecule is composed of and what is the stoichiometry (type dict)
+'ProcessRequirements' : Which processes the macromolecule requires for synthesis and maintenance and how much (type dict)
+'SupportsProcess' : Process-machineries, this macromolecule is a subunit of (type list)
+'AssociatedTarget' : Target associated with macromolecule (type str)</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_macro_molecules"><code class="name flex">
+<span>def <span class="ident">get_macro_molecules</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model macromolecule-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_medium"><code class="name flex">
+<span>def <span class="ident">get_medium</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns dictionary of current medium-composition,
+with external metabolites as keys and their concentrations as values.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>Dict</code></strong> :&ensp;<code>medium</code> <code>composition</code></dt>
+<dd>&nbsp;</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_metabolite_constraint_information"><code class="name flex">
+<span>def <span class="ident">get_metabolite_constraint_information</span></span>(<span>self, metabolite_constraint)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model metabolite mass-balance constraint from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>metabolite_constraint</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of constraint.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : metabolite ID in model (type str)
+'AssociatedMetabolite' : ID of metabolite this constraint defines the mass-balance for (same as key) (type str)
+'Type' : Equality or inequality (type dict)</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_metabolite_constraints"><code class="name flex">
+<span>def <span class="ident">get_metabolite_constraints</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model metabolite mass-balance constraint-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_metabolite_information"><code class="name flex">
+<span>def <span class="ident">get_metabolite_information</span></span>(<span>self, metabolite)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model metabolite from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>metabolite</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of metabolite.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : meatbolite ID in model (type str)
+'OtherIDs' : identifiers of this metabolite in other namespaces (BiGG, KEGG &hellip;) (type dict)
+'Name' : Name according to BiGG (type str)
+'ReactionsInvolvedWith' : Reactions which produce or consume this metabolite (type list)
+'boundary' : Boundary metabolite (type boolean)
+'Type' :
+Type of metabolite (internal exernal or biomass-precursor) (type str)
+'Compartment' : Location of meatbolite (type str)
+'AssociatedTarget' :
+Wheter metabolite represents a target
+'MassBalance_Constraint' : Id of associated mass-balance constraint.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_metabolites"><code class="name flex">
+<span>def <span class="ident">get_metabolites</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model metabolite-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_model_statistics_information"><code class="name flex">
+<span>def <span class="ident">get_model_statistics_information</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get model statistics from ModelStructure</p>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_module_information"><code class="name flex">
+<span>def <span class="ident">get_module_information</span></span>(<span>self, module)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model module from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>module</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of module.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_modules"><code class="name flex">
+<span>def <span class="ident">get_modules</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model module-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_parameter_definition"><code class="name flex">
+<span>def <span class="ident">get_parameter_definition</span></span>(<span>self, parameter)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns definition of model parameter.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of model parameter</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with parameter definition information: {parameter:info}
+The info value is a dictionary itself, which depends on the whether
+the parameter is among aggrgates or functions.
+info={'Type' : str, &ndash;&gt; type of parameter
+"Aggrgate" if aggregate and function type (michaelisMenten, linear, constant&hellip;) if function
+'Equation' : str, &ndash;&gt; mathematical equation of parameter definition
+'Variables' : list, &ndash;&gt; list of independent variables of paramter definition (growth-rate or medium components)
+'Function_parameters' : list, &ndash;&gt; list of function parameters in function definition.
+'Multiplicative Terms' : list, &ndash;&gt; list of multiplicative terms (function IDs) composing the parameter (several function ids if aggregate, only own id if function)
+'Generic_latex' : str, &ndash;&gt; equation in LaTex format (with variable ids for function parameters)
+'Specific_latex' : str, &ndash;&gt; equation in LaTex format (with actual values for function parameters)
+}</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_parameter_evolution"><code class="name flex">
+<span>def <span class="ident">get_parameter_evolution</span></span>(<span>self, model_parameter, x_values={&#39;growth_rate&#39;: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]})</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns the evolution of model parameter value over range of provided independent variable values.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>model_parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of model parameter, whos values should be determined over x_values.</dd>
+<dt><strong><code>x_values</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary with possible independent variables ('growth_rate' or medium components) as keys and list of respective values as values
+Default: {"growth_rate":[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]}</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>pandas.core.frame.DataFrame with columns for independent variable (growth-rate or medium component concentration)
+and respective parameter values.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_pareto_front"><code class="name flex">
+<span>def <span class="ident">get_pareto_front</span></span>(<span>self, variable_X, variable_Y, N=10, sign_VY=&#39;max&#39;)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Determine Pareto front of two model variables or linear combinations of model variables.
+Initially the feasible range of the X variable is determined and the Y variable is optimised
+at different values of the X variable.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>variable_X</code></strong> :&ensp;<code>str</code> or <code>dictionary</code></dt>
+<dd>If str : ID of variable, representing the X-coordinate of the Pareto-front
+If dict: Dictionary with user-specified ID of objective as key and dictionary
+with variable IDs as values and stoichiometric coefficients in objective as values.
+{'ID_objective_X':{'model_variable_1':coeff,'model_variable_2':coeff, &hellip;}}
+IMPORTANT: ID_objective_X must not equal any model variable ID.</dd>
+<dt><strong><code>variable_Y</code></strong> :&ensp;<code>str</code></dt>
+<dd>If str : ID of variable, representing the Y-coordinate of the Pareto-front
+If dict: Dictionary with user-specified ID of objective as key and dictionary
+with variable IDs as values and stoichiometric coefficients in objective as values.
+{'ID_objective_Y':{'model_variable_1':coeff,'model_variable_2':coeff, &hellip;}}
+IMPORTANT: ID_objective_Y must not equal any model variable ID.</dd>
+<dt><strong><code>N</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of intervals within the feasible range of X variable.
+Default: 10.</dd>
+<dt><strong><code>sign_VY</code></strong> :&ensp;<code>str</code></dt>
+<dd>'max': Y variable is maximised
+'min': Y variable is minimised
+Default: 'max'.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Pandas DataFrame with columns named after the two input variables
+and 'N' rows. Each row represents an interval on the Pareto front.
+Entries on each row are the X and Y coordinate on the Pareto front,
+representing the values of the two variables.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_process_constraint_information"><code class="name flex">
+<span>def <span class="ident">get_process_constraint_information</span></span>(<span>self, process_constraint)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model process-capacity constraint from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>process_constraint</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of constraint.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : process-constraint ID in model (type str)
+'AssociatedProcess' : Name of process this constraint relates to (type str)
+'AssociatedProcessID' : ID of process this constraint relates to (type str)
+'Type' : Equality or inequality (type str)
+'CapacityParameterID' :
+ID of capacity parameter (type str)
+'CapacityParameter' : Definition of capacity parameter (type dict)
+See doc string of rbatools.rba_session.SessionRBA.get_parameter_definition method</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_process_constraints"><code class="name flex">
+<span>def <span class="ident">get_process_constraints</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model process-capacity constraint-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_process_information"><code class="name flex">
+<span>def <span class="ident">get_process_information</span></span>(<span>self, process)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model process from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>process</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of process.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : process ID in model (type str)
+'Name' : name of process (same as key) (type str)
+'Initiation' : reaction-string of initiation (type list)
+'Composition' : Which proteins the process-machinery is composed of and how many (type dict)
+'Components' : Substrates to process (type dict)
+'Capacity_Constraint' :
+ID of associated capacity constraint</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_processes"><code class="name flex">
+<span>def <span class="ident">get_processes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model process-names</p>
+<h2 id="returns">Returns</h2>
+<p>List of names</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_protein_information"><code class="name flex">
+<span>def <span class="ident">get_protein_information</span></span>(<span>self, protein)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model protein from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>protein</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of protein.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : protein ID in model (type str). May be compartment_isoform.
+'ProtoID' : protein ID in model (type str). Equals ID without compartment-specific ending.
+'ExternalIDs' : identifiers of this protein in other namespaces (Locus-tag, Gene-symbol, &hellip;) (type dict)
+'Function' : associated function, according to Uniprot (type str)
+'Name' : name, according to Uniprot (type list)
+'associatedReactions' : Reactions, this protein is a subunit of (type list)
+'associatedEnzymes' : Enzymes, this protein is a subunit of (type list)
+'Compartment' : Location of the protein (type str)
+'AAcomposition' : Which amino-acids the protein is composed of and what is the stoichiometry(type dict)
+'AAnumber' : Length of protein (type int)
+'Weight' : Weight of protein (type float)
+'ProcessRequirements' : Which processes the protein requires for synthesis and maintenance and how much (type dict)
+'SupportsProcess' : Process-machineries, this protein is a subunit of (type list)
+'AssociatedTarget' : Wheter protein represents a (translation) target.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_proteins"><code class="name flex">
+<span>def <span class="ident">get_proteins</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model protein-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_reaction_information"><code class="name flex">
+<span>def <span class="ident">get_reaction_information</span></span>(<span>self, reaction)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model reaction from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>reaction</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of reaction.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information
+'ID' : reaction ID in model (type str)
+'Compartment_Machinery' : Localisation of enzyme-subunit, catalysing this reaction. (type list)
+'Name' : name according to BiGG (type str)
+'OtherIDs' : Other reaction names (eg. BiGG, KEGG) (type list)
+'Formula' : Reaction formula as string (type str)
+'Reactants' : Which metabolites does this reaction consume of and many (type dict)
+'Products' : Which metabolites does this reaction produce of and many (type dict)
+'Reversible' :
+Wheter reaction is reversible (type bool)
+'Type' : Type of reaction ('normal' or 'transport') (type str)
+'Compartment_Species' : Location of the metabolites involved with this reaction (type list)
+'Enzyme' : Enzyme catalysing this reaction (type str)
+'Twins' : Isoreactions of this reactions (catalysed by iso-enzymes) (type list)
+'AssociatedTarget' :
+Wheter reaction has a flux target.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_reactions"><code class="name flex">
+<span>def <span class="ident">get_reactions</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model reaction-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_target_information"><code class="name flex">
+<span>def <span class="ident">get_target_information</span></span>(<span>self, target)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get information on model target from ModelStructure</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>target</code></strong> :&ensp;<code>str</code></dt>
+<dd>ID of target.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with information:
+'ID' : Target ID in model (type str)
+'Group' : Class of targets (type str):
+Eg:
+'macrocomponent_production','maintenance_atp_target',
+'metabolite_production','replication_targets',
+'rna_degradation' or 'translation_targets'
+'Type' : Type of targets (type str):
+Eg:
+'metabolite_production', 'degradation_fluxes',
+'concentrations'
+or 'reaction_fluxes'
+'TargetEntity' : For which entity the target is defined (type str)
+'TargetParameterID' : Model-parameter ID which defines target value (type str)
+'TargetParameter' : Model-parameter definition of target value (type dict)
+'TargetConstraint' : 'Value' if target is defined as explicit value or 'upper/lower Bound'.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.get_targets"><code class="name flex">
+<span>def <span class="ident">get_targets</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Get all model target-IDs</p>
+<h2 id="returns">Returns</h2>
+<p>List of IDs</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.local_sensitivity"><code class="name flex">
+<span>def <span class="ident">local_sensitivity</span></span>(<span>self, parameters=[], relative_parameter_difference=0.01, muapprox_precision=1e-07, musearch_max=1.0)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Determines local sensitivity of (max) growth-rate towards small parameter changes.
+Parameter value is increased and reduced by small relative values
+and the respective maximum growth-rate is determined. From the
+resulting differences in parameter value and growth-rate,
+the local sensitivity is inferred. In theory the local sensitivity
+represents the partial derivative of growth-rate vs parameter, at the wild-type.
+Beware that numerical precision is an issue
+with this method and can influence results.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>parameters</code></strong> :&ensp;<code>list</code> or <code>string</code></dt>
+<dd>Parameters to apply local sensitivity ananlysis to.
+If list with model parameter IDs is provided, those are used.
+If str 'Enzymes' all enzyme capacities are used.
+If str 'Processes' all process capacities are used.
+If str 'Targets' all cellular targets are used.
+If str 'Densities' all compartment capacities are used.
+If empty list, all model cellular targets, enzyme- process- and compartment capacities are used.
+Default: []</dd>
+<dt><strong><code>relative_parameter_difference</code></strong> :&ensp;<code>float</code></dt>
+<dd>Parameter is multplied once with factor (1+relative_parameter_difference) and once with factor (1-relative_parameter_difference).
+The resulting maximum growth rates are determined.
+Default: e-2</dd>
+<dt><strong><code>muapprox_precision</code></strong> :&ensp;<code>float</code></dt>
+<dd>Numeric precision to which the maximum growth rate is determined. (See parameter 'precision' in method find_max_growth_rate)
+Default: e-8</dd>
+<dt><strong><code>muapprox_precision</code></strong> :&ensp;<code>float</code></dt>
+<dd>Upper bound of search space for maximum growth rate. (See parameter 'max' in method find_max_growth_rate)
+Default: 1.0</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Pandas DataFrame with results.</p>
+<h2 id="columns">Columns</h2>
+<p>'Mu_WT' : Maximum wild-type growth-rate.
+'WT_param_value' : original parameter value at maximum wild-type growth-rate.
+'Relative_param_change' : 'relative_parameter_difference' input parameter
+'Absolute_param_change' : 'relative_parameter_difference' input parameter times original parameter value at maximum wild-type growth-rate.
+'Upper_Mu' : Maximum growth rate at parameter multiplied with factor (1+relative_parameter_difference)
+'Lower_Mu' : Maximum growth rate at parameter multiplied with factor (1-relative_parameter_difference)
+'Mu_change' : Difference between Upper- and Lower_Mu
+'Absolute_Sensitivity' : Absolute difference in maximum growth-rate per absolute change in parameter-value ((d_mu)/(2<em>out.loc[param,"Absolute_param_change"])).
+'Scaled_Sensitivity' : Relative change in maximum growth-rate (to wild-type) per relative change in parameter-value ((d_mu/WT_mu)/(2</em>relative_parameter_difference)).</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.rbapy_mumax_search"><code class="name flex">
+<span>def <span class="ident">rbapy_mumax_search</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.rebuild_from_model"><code class="name flex">
+<span>def <span class="ident">rebuild_from_model</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Rebuilds computational model-representation from own attribute "model" (rba.RbaModel-object).</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.record_parameters"><code class="name flex">
+<span>def <span class="ident">record_parameters</span></span>(<span>self, run_name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Records Simulation parameters (LP-coefficients etc.) for further use.
+and stores them in own 'Parameters'-attribute as pandas.DataFrames in a dictionary
+with the respective run-name being a column in all DataFrames.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>run_name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of observation.
+Serves as ID for all Data, originating from these.</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.record_results"><code class="name flex">
+<span>def <span class="ident">record_results</span></span>(<span>self, run_name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Records Simulation output for further use.
+and stores them in own 'Results'-attribute as pandas.DataFrames in a dictionary
+with the respective run-name being a column in all DataFrames.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>run_name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of observation.
+Serves as ID for all Data, originating from these.</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.reload_model"><code class="name flex">
+<span>def <span class="ident">reload_model</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Reloads model from xml-files and then rebuild computational model-representation.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.return_exchange_fluxes"><code class="name flex">
+<span>def <span class="ident">return_exchange_fluxes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Generates a dictonary with the exchang-rates of boundary-metabolites.</p>
+<h2 id="returns">Returns</h2>
+<p>Dictonary with exchange-keys and respective -rates.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.sample_kapp_multipliers"><code class="name flex">
+<span>def <span class="ident">sample_kapp_multipliers</span></span>(<span>self, n=1, mean=0, stdev=0.561, enzymes=[], Variables_to_record=[], wt_growth_rate=0.0)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Applies n random multiplicative factors to each individual enzymes
+forward and backward capacity and maximises growth-rate.
+The multiplicative factors
+are represented as e^^x,
+where x is drawn from a normal distribution. Records corresponding
+maximum groth-rate and specified solution values.
+Requires previous addition of multipliers to parameters, via add_parameter_multiplier method.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of samples
+Default: 1</dd>
+<dt><strong><code>mean</code></strong> :&ensp;<code>float</code></dt>
+<dd>Mean of normal distribution to draw from
+Default: 0</dd>
+<dt><strong><code>stdev</code></strong> :&ensp;<code>float</code></dt>
+<dd>Stdev of normal distribution to draw from
+Default: 0.561</dd>
+<dt><strong><code>enzymes</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of enzymes to sample efficiencies for.
+Default: [] &ndash;&gt; all model enzymes are used.</dd>
+<dt><strong><code>Variables_to_record</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of problem variables' solution values to be exported .
+Default: []</dd>
+<dt><strong><code>wt_growth_rate</code></strong> :&ensp;<code>float</code></dt>
+<dd>Wild-type growth-rate to use as starting value for mumax-search.
+Default: 0.0 &ndash;&gt; Then not set as starting value.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary: With growth-rate ["Mu"] and Variables_to_record as keys and list of sampled solution values as values.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.screen_multipliers"><code class="name flex">
+<span>def <span class="ident">screen_multipliers</span></span>(<span>self, parameter, factors=[], precision=0.001, max=4.0, start_value=4.0, Variables_to_record=[])</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Applies several multiplicative
+factors to model parameters.
+Records corresponding maximum groth-rate and specified solution values.
+Requires previous addition of multipliers to parameters, via add_parameter_multiplier method.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>parameter</code></strong> :&ensp;<code>str</code> or <code>list</code></dt>
+<dd>parameter ID or list of parameters to screen</dd>
+<dt><strong><code>factors</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of multiplicative factors to screen
+Default: []</dd>
+<dt><strong><code>Variables_to_record</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of problem variables' solution values to be exported .
+Default: []</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Dictionary: with factor values as keys and dictionary with growth-rate ["Mu"] and Variables_to_record as values.</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_constant_enzyme_efficiencies"><code class="name flex">
+<span>def <span class="ident">set_constant_enzyme_efficiencies</span></span>(<span>self, efficiencies)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets constant enzyme efficiencies (forward and backward) to specified values</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>efficiencies</code></strong> :&ensp;<code>pandas.core.frame.DataFrame</code></dt>
+<dd>Input DataFrame with columns: 'Enzyme','Forward_efficiency','Backward_efficiency'</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_enzyme_backward_efficiency_multipliers"><code class="name flex">
+<span>def <span class="ident">set_enzyme_backward_efficiency_multipliers</span></span>(<span>self, efficiency_multiplier_values=Empty DataFrame
+Columns: []
+Index: [], rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets multiplicative factors of backward efficiency parameters of enzymes
+to specified values. Requires previous addition of multipliers to enzyme
+backward efficiencies, via add_parameter_multiplier method.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>efficiency_multiplier_values</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Dataframe with mandatory columns 'Enzyme' and 'Backward_efficiency_multiplier'
+Default: {}</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_enzyme_forward_efficiency_multipliers"><code class="name flex">
+<span>def <span class="ident">set_enzyme_forward_efficiency_multipliers</span></span>(<span>self, efficiency_multiplier_values=Empty DataFrame
+Columns: []
+Index: [], rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets multiplicative factors of forward efficiency parameters of enzymes
+to specified values. Requires previous addition of multipliers to enzyme
+forward efficiencies, via add_parameter_multiplier method.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>efficiency_multiplier_values</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Dataframe with mandatory columns 'Enzyme' and 'Forward_efficiency_multiplier'
+Default: {}</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_growth_rate"><code class="name flex">
+<span>def <span class="ident">set_growth_rate</span></span>(<span>self, Mu)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets growth-rate to desired value.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>Mu</code></strong> :&ensp;<code>float</code></dt>
+<dd>Growth rate</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_medium"><code class="name flex">
+<span>def <span class="ident">set_medium</span></span>(<span>self, changes)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets the concentration of specified growth-substrate(s) in medium.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>changes</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Keys : ID of metabolite(s) in medium.
+Values : New concention(s)</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_parameter_multiplier"><code class="name flex">
+<span>def <span class="ident">set_parameter_multiplier</span></span>(<span>self, model_parameter, parameter_type=&#39;&#39;, new_value=nan, rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets multiplicative factor of model parameter to specified value.
+Requires previous addition of multiplier to parameter, via add_parameter_multiplier method.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>model_parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>Model parameter for which a function parameter should be changed</dd>
+<dt><strong><code>new_value</code></strong> :&ensp;<code>float</code></dt>
+<dd>New parameter value to be applied
+Default: numpy.nan</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.set_parameter_value"><code class="name flex">
+<span>def <span class="ident">set_parameter_value</span></span>(<span>self, model_parameter, function_parameter, parameter_type=&#39;&#39;, change_message=&#39;&#39;, new_value=nan, rebuild_model=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Sets function parameter of model parameter to specified value.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>model_parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>Model parameter for which a function parameter should be changed</dd>
+<dt><strong><code>function_parameter</code></strong> :&ensp;<code>str</code></dt>
+<dd>Function parameter to be changed</dd>
+<dt><strong><code>new_value</code></strong> :&ensp;<code>float</code></dt>
+<dd>New parameter value to be applied</dd>
+<dt><strong><code>rebuild_model</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Wheter the model should be immediately rebuilt
+Default: True</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.solve"><code class="name flex">
+<span>def <span class="ident">solve</span></span>(<span>self, run_name=&#39;DontSave&#39;, feasible_stati=[&#39;optimal&#39;, &#39;feasible&#39;], try_unscaling_if_sol_status_is_feasible_only_before_unscaling=True)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Solves problem to find a solution.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>run_name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of observation.
+Serves as ID for all data, originating from this run.
+Special values :
+'DontSave' : Results are not recorded
+'Auto' : Results are automatically recorded
+and appended to existing ones.
+Named with number.
+Any other string: Results are recorded under this name.
+Default: 'DontSave'</dd>
+<dt><strong><code>feasible_stati</code></strong> :&ensp;<code>list</code> of <code>str</code></dt>
+<dd>List with acceptable solution statuses.
+Default: ["optimal","feasible"]</dd>
+<dt><strong><code>try_unscaling_if_sol_status_is_feasible_only_before_unscaling</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If true; the problem will be attempted to be solved without scaling,
+if the scaled problem is feasible but the solution is not feasible
+after unscaling (CPLEX solution-status 5).
+Default: True</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Bool, indicating if problem could be solved (feasible) or not (infeasible).</p></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.undo_gene_knock_out"><code class="name flex">
+<span>def <span class="ident">undo_gene_knock_out</span></span>(<span>self, gene)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Undoes a gene knock out.
+Removes all constraints, on knocking out the provided genes</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>gene</code></strong> :&ensp;<code>str</code> or <code>list</code> of <code>strings</code></dt>
+<dd>ID(s) of model-proteins to be un-knocked out.
+Can either be gene-identifier, represented as ID or ProtoID of
+proteins in rbatools.protein_bloc.ProteinBlock.Elements class
+(depends on whether protein-isoforms are considered).</dd>
+</dl></section>
+</dd>
+<dt id="rbatools.rba_session.SessionRBA.write_results"><code class="name flex">
+<span>def <span class="ident">write_results</span></span>(<span>self, session_name, digits=10)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Creates SimulationData and SimulationParameters objects from recordings ('Results'.'Parameters').</p>
+<p>Stores them as rbatools.rba_simulation_data.SimulationDataRBA
+and rbatools.rba_simulation_parameters.SimulationParametersRBA objects as attributes.
+Access via attributes .SimulationData and SimulationParameters respectively.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>digits</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of decimal places in the numeric results
+Default: 10</dd>
+<dt><strong><code>session_name</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of Simulation session.</dd>
+</dl></section>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="rbatools" href="index.html">rbatools</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="rbatools.rba_session.SessionRBA" href="#rbatools.rba_session.SessionRBA">SessionRBA</a></code></h4>
+<ul class="">
+<li><code><a title="rbatools.rba_session.SessionRBA.__init__" href="#rbatools.rba_session.SessionRBA.__init__">__init__</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.add_exchange_reactions" href="#rbatools.rba_session.SessionRBA.add_exchange_reactions">add_exchange_reactions</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.add_parameter_multiplier" href="#rbatools.rba_session.SessionRBA.add_parameter_multiplier">add_parameter_multiplier</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.add_parameter_multipliers_for_enzyme_efficiencies" href="#rbatools.rba_session.SessionRBA.add_parameter_multipliers_for_enzyme_efficiencies">add_parameter_multipliers_for_enzyme_efficiencies</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.add_reaction" href="#rbatools.rba_session.SessionRBA.add_reaction">add_reaction</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.add_specific_kapps_for_default_kapp_enzyme" href="#rbatools.rba_session.SessionRBA.add_specific_kapps_for_default_kapp_enzyme">add_specific_kapps_for_default_kapp_enzyme</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.add_specific_kapps_for_default_kapp_enzymes" href="#rbatools.rba_session.SessionRBA.add_specific_kapps_for_default_kapp_enzymes">add_specific_kapps_for_default_kapp_enzymes</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.apply_gene_knock_out" href="#rbatools.rba_session.SessionRBA.apply_gene_knock_out">apply_gene_knock_out</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.build_fba_model" href="#rbatools.rba_session.SessionRBA.build_fba_model">build_fba_model</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.build_model_structure" href="#rbatools.rba_session.SessionRBA.build_model_structure">build_model_structure</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.clear_results_and_parameters" href="#rbatools.rba_session.SessionRBA.clear_results_and_parameters">clear_results_and_parameters</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.derive_current_biomass_function" href="#rbatools.rba_session.SessionRBA.derive_current_biomass_function">derive_current_biomass_function</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.find_max_growth_rate" href="#rbatools.rba_session.SessionRBA.find_max_growth_rate">find_max_growth_rate</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.find_min_substrate_concentration" href="#rbatools.rba_session.SessionRBA.find_min_substrate_concentration">find_min_substrate_concentration</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_compartment_information" href="#rbatools.rba_session.SessionRBA.get_compartment_information">get_compartment_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_compartments" href="#rbatools.rba_session.SessionRBA.get_compartments">get_compartments</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_constant_enzyme_efficiencies" href="#rbatools.rba_session.SessionRBA.get_constant_enzyme_efficiencies">get_constant_enzyme_efficiencies</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_constraint_saturation" href="#rbatools.rba_session.SessionRBA.get_constraint_saturation">get_constraint_saturation</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_current_parameter_value" href="#rbatools.rba_session.SessionRBA.get_current_parameter_value">get_current_parameter_value</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_density_constraint_information" href="#rbatools.rba_session.SessionRBA.get_density_constraint_information">get_density_constraint_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_density_constraints" href="#rbatools.rba_session.SessionRBA.get_density_constraints">get_density_constraints</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_enzyme_constraint_information" href="#rbatools.rba_session.SessionRBA.get_enzyme_constraint_information">get_enzyme_constraint_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_enzyme_constraints" href="#rbatools.rba_session.SessionRBA.get_enzyme_constraints">get_enzyme_constraints</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_enzyme_information" href="#rbatools.rba_session.SessionRBA.get_enzyme_information">get_enzyme_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_enzymes" href="#rbatools.rba_session.SessionRBA.get_enzymes">get_enzymes</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_feasible_range" href="#rbatools.rba_session.SessionRBA.get_feasible_range">get_feasible_range</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_general_model_information" href="#rbatools.rba_session.SessionRBA.get_general_model_information">get_general_model_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_macro_molecule_information" href="#rbatools.rba_session.SessionRBA.get_macro_molecule_information">get_macro_molecule_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_macro_molecules" href="#rbatools.rba_session.SessionRBA.get_macro_molecules">get_macro_molecules</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_medium" href="#rbatools.rba_session.SessionRBA.get_medium">get_medium</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_metabolite_constraint_information" href="#rbatools.rba_session.SessionRBA.get_metabolite_constraint_information">get_metabolite_constraint_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_metabolite_constraints" href="#rbatools.rba_session.SessionRBA.get_metabolite_constraints">get_metabolite_constraints</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_metabolite_information" href="#rbatools.rba_session.SessionRBA.get_metabolite_information">get_metabolite_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_metabolites" href="#rbatools.rba_session.SessionRBA.get_metabolites">get_metabolites</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_model_statistics_information" href="#rbatools.rba_session.SessionRBA.get_model_statistics_information">get_model_statistics_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_module_information" href="#rbatools.rba_session.SessionRBA.get_module_information">get_module_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_modules" href="#rbatools.rba_session.SessionRBA.get_modules">get_modules</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_parameter_definition" href="#rbatools.rba_session.SessionRBA.get_parameter_definition">get_parameter_definition</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_parameter_evolution" href="#rbatools.rba_session.SessionRBA.get_parameter_evolution">get_parameter_evolution</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_pareto_front" href="#rbatools.rba_session.SessionRBA.get_pareto_front">get_pareto_front</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_process_constraint_information" href="#rbatools.rba_session.SessionRBA.get_process_constraint_information">get_process_constraint_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_process_constraints" href="#rbatools.rba_session.SessionRBA.get_process_constraints">get_process_constraints</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_process_information" href="#rbatools.rba_session.SessionRBA.get_process_information">get_process_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_processes" href="#rbatools.rba_session.SessionRBA.get_processes">get_processes</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_protein_information" href="#rbatools.rba_session.SessionRBA.get_protein_information">get_protein_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_proteins" href="#rbatools.rba_session.SessionRBA.get_proteins">get_proteins</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_reaction_information" href="#rbatools.rba_session.SessionRBA.get_reaction_information">get_reaction_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_reactions" href="#rbatools.rba_session.SessionRBA.get_reactions">get_reactions</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_target_information" href="#rbatools.rba_session.SessionRBA.get_target_information">get_target_information</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.get_targets" href="#rbatools.rba_session.SessionRBA.get_targets">get_targets</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.local_sensitivity" href="#rbatools.rba_session.SessionRBA.local_sensitivity">local_sensitivity</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.rbapy_mumax_search" href="#rbatools.rba_session.SessionRBA.rbapy_mumax_search">rbapy_mumax_search</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.rebuild_from_model" href="#rbatools.rba_session.SessionRBA.rebuild_from_model">rebuild_from_model</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.record_parameters" href="#rbatools.rba_session.SessionRBA.record_parameters">record_parameters</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.record_results" href="#rbatools.rba_session.SessionRBA.record_results">record_results</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.reload_model" href="#rbatools.rba_session.SessionRBA.reload_model">reload_model</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.return_exchange_fluxes" href="#rbatools.rba_session.SessionRBA.return_exchange_fluxes">return_exchange_fluxes</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.sample_kapp_multipliers" href="#rbatools.rba_session.SessionRBA.sample_kapp_multipliers">sample_kapp_multipliers</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.screen_multipliers" href="#rbatools.rba_session.SessionRBA.screen_multipliers">screen_multipliers</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_constant_enzyme_efficiencies" href="#rbatools.rba_session.SessionRBA.set_constant_enzyme_efficiencies">set_constant_enzyme_efficiencies</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_enzyme_backward_efficiency_multipliers" href="#rbatools.rba_session.SessionRBA.set_enzyme_backward_efficiency_multipliers">set_enzyme_backward_efficiency_multipliers</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_enzyme_forward_efficiency_multipliers" href="#rbatools.rba_session.SessionRBA.set_enzyme_forward_efficiency_multipliers">set_enzyme_forward_efficiency_multipliers</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_growth_rate" href="#rbatools.rba_session.SessionRBA.set_growth_rate">set_growth_rate</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_medium" href="#rbatools.rba_session.SessionRBA.set_medium">set_medium</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_parameter_multiplier" href="#rbatools.rba_session.SessionRBA.set_parameter_multiplier">set_parameter_multiplier</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.set_parameter_value" href="#rbatools.rba_session.SessionRBA.set_parameter_value">set_parameter_value</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.solve" href="#rbatools.rba_session.SessionRBA.solve">solve</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.undo_gene_knock_out" href="#rbatools.rba_session.SessionRBA.undo_gene_knock_out">undo_gene_knock_out</a></code></li>
+<li><code><a title="rbatools.rba_session.SessionRBA.write_results" href="#rbatools.rba_session.SessionRBA.write_results">write_results</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.5.3</a>.</p>
+</footer>
+</body>
+</html>
