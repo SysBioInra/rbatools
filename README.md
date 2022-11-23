@@ -8,9 +8,8 @@ It includes methods to solve, modify, and analyse RBA models and to export model
 ### Install this package locally
 Navigate into the base directory of rbatools locally on your computer and execute:
 
-    ```
     pip install .
-    ```
+
 ### Install this from PyPI
 
 
