@@ -1,11 +1,12 @@
 # rbatools
-
+==========
 rbatools serves as an interface to resource allocation modelling using Resource Balance Analysis (RBA) models (https://rba.inrae.fr).
 It includes methods to solve, modify, and analyse RBA models and to export model information and simulation results into various formats.
 
 ## Installation
-
+---------------
 ## Repository structure
+-----------------------
 
 ### rbatools
 This is the library with all the necessary classes for the usage of RBA_tools.
