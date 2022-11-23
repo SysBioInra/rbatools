@@ -8,3 +8,5 @@ https://github.com/SysBioInra/RBApy
 
 RBA models can be obtained from the repository https://github.com/SysBioInra/Bacterial-RBA-models
 
+Information on RBA can be found at https://rba.inrae.fr and on rbatools at https://rba.inrae.fr/rbatools
+
