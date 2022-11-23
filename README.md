@@ -13,7 +13,7 @@ Nonetheless we included functionality with the freely available swiglpk solver, 
 ## Installation
 
 ### Install this package locally
-Navigate into the base directory of rbatools locally on your computer and execute:
+After cloning this repository, navigate into the base directory of rbatools locally on your computer and execute:
 
     pip install .
 
