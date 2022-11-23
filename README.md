@@ -17,7 +17,7 @@ Navigate into the base directory of rbatools locally on your computer and execut
 
     pip install .
 
-### Install this from PyPI (once available)
+### Install this from PyPI (not available yet)
     pip install rbatools
 
 #### Please note that installation of rbatools is required to run the tutorial.
