@@ -13,7 +13,7 @@ Nonetheless we included functionality with the freely available swiglpk solver, 
 ## Installation
 
 ### Install this package locally
-After cloning this repository, navigate into the base directory of rbatools locally on your computer and execute:
+After cloning this repository, in your terminal navigate into the base directory of rbatools locally on your computer and execute:
 
     pip install .
 
@@ -32,15 +32,22 @@ They are located in this repositories' subdirectory:
 
 Please note that rba-models should be obtained (see section "Model availability") and stored in the same directory as this repository, prior to running the notebooks.
 
-##### Requirements to run jupyter notebooks
-The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands:
+##### Requirements to run jupyter notebooks:
+The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands in your terminal:
 
     pip install notebook
 
     pip install ipywidgets
 
     pip install seaborn
-    
+
+##### Instructions to run jupyter notebooks:
+In rder to lauch the jupyter notebook interface, please execute the following command in your terminal:
+
+    jupyter notebook
+
+Once a file browser opens in your web browser, please navigate in to the "/tutorials/jupyter_notebooks" directory and doubleclick one of the following notebooks.
+
 #### Example_workflows_rba_tools.ipynb
 This is a Jupyter notebook with example applications and workflows of rbatools with B.subtilis model.
 #### Model_components_information_access.ipynb
