@@ -63,17 +63,33 @@ Example applications and workflows with E.coli model.
 
 ### scripts
 
-we provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
+We provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
 
 #### run_growth_rate_optimization.py
 
+This script runs a growth-rate optimisation and stores the obtained results as sbtab.
+The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
+
+    python run_growth_rate_optimization.py path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
+
 #### generate_sbtab_of_model_for_html.py
+
+This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
+The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
+To run it, execute the following command in your terminal:
+
+    python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir dedicated/location/of/results
 
 ### run command-line tool
 
-#### run-growth-rate-optimization
+If the rbatools packaage is installed properly, the aforementioned scripts can also be executed as command-line tools
+The respective commands (with identical arguments as scripts) for the terminal are:
 
-#### generate-sbtab-of-model-for-html
+    run-growth-rate-optimization path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
+    
+and 
+
+    generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results
 
 ## Documentation
 
