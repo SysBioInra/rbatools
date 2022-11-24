@@ -58,7 +58,6 @@ This is a Jupyter notebook with example applications on how to access informatio
 Example applications and workflows with E.coli model.
 (Please note significantly longer computation times, than with B.subtilis model)
 
-## Documentation
 
 ## Running
 
@@ -66,6 +65,7 @@ Example applications and workflows with E.coli model.
 
 ### run command-line tool
 
+## Documentation
 
 ## Model availability
 RBA models can be obtained from the repository https://github.com/SysBioInra/Bacterial-RBA-models
