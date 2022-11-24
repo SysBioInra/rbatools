@@ -32,6 +32,15 @@ They are located in this repositories' subdirectory:
 
 Please note that rba-models should be obtained (see section "Model availability") and stored in the same directory as this repository, prior to running the notebooks.
 
+#### Requirements to run jupyter notebooks
+The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands:
+
+    pip install notebook
+
+    pip install ipywidgets
+
+    pip install seaborn
+    
 #### Example_workflows_rba_tools.ipynb
 This is a Jupyter notebook with example applications and workflows of rbatools with B.subtilis model.
 #### Model_components_information_access.ipynb
@@ -45,8 +54,6 @@ Example applications and workflows with E.coli model.
 ## Documentation
 
 ## Running
-
-### run in own scripts
 
 ### run provided scripts
 
