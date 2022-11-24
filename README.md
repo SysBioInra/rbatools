@@ -25,6 +25,12 @@ After cloning this repository, in your terminal navigate into the base directory
 #### --------------------> Please note that installation of rbatools is required to run the tutorial.
 
 ## Tutorials
+### MyBinder Tutorial
+We generated a short tutorial, to be provided online with mybinder (https://mybinder.org).
+
+Please  follow this link:
+https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=Example_workflows_rba_tools_mybinder.ipynb 
+    
 ### Instructional Jupyter notebooks
 This repository includes various instructional jupyter notebooks, exemplifying the use of rbatools.
 
