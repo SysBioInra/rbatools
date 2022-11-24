@@ -61,11 +61,23 @@ Example applications and workflows with E.coli model.
 
 ## Running
 
-### run provided scripts
+### scripts
+
+we provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
+
+#### run_growth_rate_optimization.py
+
+#### generate_sbtab_of_model_for_html.py
 
 ### run command-line tool
 
+#### run-growth-rate-optimization
+
+#### generate-sbtab-of-model-for-html
+
 ## Documentation
+
+### HTML documentation
 
 ## Model availability
 RBA models can be obtained from the repository https://github.com/SysBioInra/Bacterial-RBA-models
