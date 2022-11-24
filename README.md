@@ -20,7 +20,7 @@ After cloning this repository, in your terminal navigate into the base directory
 ### Install this from PyPI (not available yet)
     pip install rbatools
 
-#### Please note that installation of rbatools is required to run the tutorial.
+#### --------------------> Please note that installation of rbatools is required to run the tutorial.
 
 ## Tutorials
 ### Instructional Jupyter notebooks
@@ -30,7 +30,7 @@ They are located in this repositories' subdirectory:
 
     /tutorials/jupyter_notebooks
 
-Please note that rba-models should be obtained (see section "Model availability") and stored in the same directory as this repository, prior to running the notebooks.
+#### --------------------> Please note that rba-models should be obtained (see section "Model availability") and stored in the same directory as this repository, prior to running the notebooks.
 
 ##### Requirements to run jupyter notebooks:
 The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands in your terminal:
@@ -42,7 +42,7 @@ The jupyter notebooks use additional functionality provided by libraries, not de
     pip install seaborn
 
 ##### Instructions to run jupyter notebooks:
-In rder to lauch the jupyter notebook interface, please execute the following command in your terminal:
+In order to lauch the jupyter notebook interface, please execute the following command in your terminal:
 
     jupyter notebook
 
