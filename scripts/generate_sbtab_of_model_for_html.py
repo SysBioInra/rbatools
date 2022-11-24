@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Maximise growth rate and store results as sbtab"""
+"""
+Import model and generate SBtab of model structure.
+Arguments: 
+    model_dir: (relative) path to RBA-model
+    --output-dir: (relative) path to storage location of results.
+"""
 
 # python 2/3 compatibility
 from __future__ import division, print_function
@@ -19,7 +24,7 @@ def main():
                         help='Directory to save the SBtab file')
 
     args = parser.parse_args()
-    Session=SessionRBA(xml_dir=args.model_dir,lp_solver="glpk")
+    Session=SessionRBA(xml_dir=args.model_dir,lp_solver="swiglpk")
 
     if args.output_dir is not None:
         output_dir=args.output_dir+"/"

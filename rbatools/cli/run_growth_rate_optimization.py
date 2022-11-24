@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Maximise growth rate and store results as sbtab"""
+"""
+Maximise growth rate and store results as sbtab.
+Arguments: 
+    model_dir: (relative) path to RBA-model
+    --lp-solver: "cplex" or "swiglpk" (default: swiglpk)
+    --output-dir: (relative) path to storage location of results.
+"""
 
 # python 2/3 compatibility
 from __future__ import division, print_function
@@ -16,10 +22,10 @@ def main():
     parser = argparse.ArgumentParser(description='Maximise growth rate and store results as sbtab')
     parser.add_argument('model_dir', metavar='model-dir', type=str,
                         help='Directory of RBA-model')
-    parser.add_argument('--lp-solver', type=str, default="glpk",
+    parser.add_argument('--lp-solver', type=str, default="swiglpk",
                         help=(
-                            'LP solver ("cplex", "glpk";'
-                            'default: "glpk"'
+                            'LP solver ("cplex", "swiglpk";'
+                            'default: "swiglpk"'
                         ))
     parser.add_argument('--output-dir', type=str, default=None,
                         help='Directory to save the SBtab file')

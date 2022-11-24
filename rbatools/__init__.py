@@ -1,6 +1,7 @@
 from rbatools.rba_model_structure import ModelStructureRBA
 from rbatools.rba_session import SessionRBA
 from rbatools.rba_problem import ProblemRBA
+from rbatools.fba_problem import ProblemFBA
 from rbatools.rba_lp import LinearProblem
 from rbatools.rba_problem_matrix import ProblemMatrix
 from rbatools.rba_simulation_data import SimulationDataRBA
