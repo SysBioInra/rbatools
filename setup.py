@@ -79,7 +79,7 @@ setup(name='rbatools',
     # https://packaging.python.org/en/latest/requirements.html
     entry_points={
         'console_scripts': [
-            'run-growth-rate-optimisation=rbatools.cli.run_growth_rate_optimisation:main',
+            'run-growth-rate-optimization=rbatools.cli.run_growth_rate_optimization:main',
             'generate-sbtab-of-model-for-html=rbatools.cli.generate_sbtab_of_model_for_html:main',
         ],
     },
