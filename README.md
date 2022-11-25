@@ -26,7 +26,7 @@ After cloning this repository, in your terminal navigate into the base directory
 
 ## Tutorials
 ### MyBinder Tutorial
-We generated a short tutorial, to be provided online with mybinder (https://mybinder.org).
+We generated a short tutorial, to be provided online with mybinder.
 
 Please  follow this link:
 https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb 
