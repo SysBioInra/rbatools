@@ -38,7 +38,7 @@ They are located in this repositories' subdirectory:
 
     /tutorials/jupyter_notebooks
 
-#### --------------------> Please note that rba-models should be obtained (see section "Model availability") and stored in the same directory as this repository, prior to running the notebooks.
+#### --------------------> Please note that prior to running the notebooks, rba models have to be obtained (see section "Model availability") and stored in the same directory as this repository.
 
 ##### Requirements to run jupyter notebooks:
 The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands in your terminal:
