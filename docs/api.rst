@@ -4,4 +4,7 @@ API
 .. autosummary::
    :toctree: generated
 
-   rbatools
+.. automodule:: rbatools
+   :members:
+
+   
