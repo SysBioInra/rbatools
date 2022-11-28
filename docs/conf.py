@@ -5,6 +5,20 @@ sys.path.insert(0, os.path.abspath('../rbatools'))
 
 # -- Project information
 
+import sphinx.apidoc
+def setup(app):
+    app.add_javascript('copybutton.js')
+    sphinx.apidoc.main(['-f', #Overwrite existing files
+                        '-T', #Create table of contents
+                        '-e', #Give modules their own pages
+                        #'-E', #user docstring headers
+                        #'-M', #Modules first
+                        '-o', #Output the files to:
+                        './_html/', #Output Directory
+                        '../rbatools', #Main Module directory
+                        ]
+    )
+
 project = 'rbatools'
 copyright = '2022 INRAE - MaIAGE - France'
 author = 'Bodeit, O., Liebermeister, W. and Goelzer A.'
