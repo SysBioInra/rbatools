@@ -24,7 +24,7 @@ To use rbatools, import it in Python
 
 Learning materials and further information
 ------------------------------------------
-For further information, please visit `our website <https://rba.inrae.fr>` and for tutorials our `GitHub <https://github.com/SysBioInra/rbatools>`.
+For further information, please visit `our website <https://rba.inrae.fr>`_ and for tutorials our `GitHub <https://github.com/SysBioInra/rbatools>`_.
 
 Usage remark
 ------------
