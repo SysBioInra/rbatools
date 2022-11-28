@@ -1,4 +1,4 @@
-rbatools
+API
 ===
 
 .. autosummary::
