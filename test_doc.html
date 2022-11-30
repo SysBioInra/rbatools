@@ -1,0 +1,51 @@
+---
+layout: subpage
+---
+
+
+<!DOCTYPE html>
+<html>
+	<body>
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <ol type="rbatools">
+    <li><a href="html/rbatools/compartment_block.html">rbatools.compartment_block</a></li>
+  </ol>
+</div>
+
+<div id="myOpenButton" class="openButton" onclick="openNav()">
+	&#9776;
+</div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "470px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+openNav()
+window.onscroll = function() {scrollFunction()};
+</script>
+
+	</body>
+</html>
