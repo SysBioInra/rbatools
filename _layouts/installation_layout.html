@@ -11,6 +11,7 @@
   </head>
   <body>
     <!--a id="skip-to-content" href="#content">Skip to the content.</a-->
+
     <header class="page-header" role="banner">
       <!--h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1-->
       <div class="column">
@@ -20,14 +21,21 @@
       </div>
       <div class="row">
         <div class="column">
+          <a href="usage.html">
+            <img src="images/RBA_Userguide.svg">
+          </a>
+        </div>
+        <div class="column">
           <a href="installation.html">
             <img src="images/RBA_Availability_clicked.svg">
           </a>
         </div>
+        <div class="column">
+          <a href="test_doc.html">
+            <img src="images/RBA_APIreference.svg">
+          </a>
+        </div>
       </div>
-      <a href="index.html">
-        <h1 class="project-name"> <img src="images/RBA_Availability.svg"></h1>
-      </a>
       <!--h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2-->
       <!--
       {% if site.github.is_project_page %}
