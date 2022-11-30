@@ -15,7 +15,7 @@
 }
 
 .page-header {
-	background-color: #D0F5FF;
+	background-color: #E6F4F1;
 	background-image: none;
 	padding-top: 20px;
 	padding-bottom: 30px;
@@ -27,7 +27,7 @@
   .main-content h4,
   .main-content h5,
   .main-content h6 {
-color: #59809E; }
+color: #00253E; }
 
 .column {
   padding: 10px;
@@ -52,7 +52,7 @@ color: #59809E; }
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #8EB5D5;
+  background-color: #59809E;
   overflow-x: hidden;
   transition: 0.0s;
   padding-top: 60px;
@@ -62,13 +62,13 @@ color: #59809E; }
   padding: 6px 6px 6px 25px;
   text-decoration: none;
   font-size: 20px;
-  color: #59809E;
+  color: #E6F4F1;
   display: block;
   transition: 0.0s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #E6F4F1;
 }
 
 .sidenav .closebtn {
@@ -103,7 +103,7 @@ color: #59809E; }
   border: none;
   outline: none;
   background-color: #4c352f;
-  color: #e6f4f1;
+  color: #E6F4F1;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
