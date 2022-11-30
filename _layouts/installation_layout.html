@@ -12,20 +12,19 @@
   <body>
     <!--a id="skip-to-content" href="#content">Skip to the content.</a-->
     <header class="page-header" role="banner">
+      <!--h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1-->
+      <div class="column">
+        <a href="index.html">
+          <img src="images/RBAtools.svg">
+        </a>
+      </div>
+      <div class="row">
         <div class="column">
-            <a href="index.html">
-              <img src="images/RBAtools.svg">
-            </a>
+          <a href="installation.html">
+            <img src="images/RBA_Availability.svg">
+          </a>
         </div>
-        <div class="column">
-            <a href="installation.html">
-              <img src="images/RBAtools_Availability.svg">
-            </a>
-        </div>
-          <!--h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1-->
-      <a href="index.html">
-        <h1 class="project-name"> <img src="images/RBAtools.svg"></h1>
-      </a>
+      </div>
       <!--h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2-->
       <!--
       {% if site.github.is_project_page %}
