@@ -40,14 +40,55 @@
     <div id="myGoToTopButton" class="gototopButton" onclick="topFunction()">
       &#10514;
     </div>
-    
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="rba_session.html"> <code>SessionRBA</code> </a>
+         <a href="rba_model_structure.html"> <code>ModelStructureRBA</code> </a>
+         <a href="rba_simulation_data.html"> <code>SimulationDataRBA</code> </a>
+         <a href="rba_simulation_parameters.html"> <code>SimulationParametersRBA</code> </a>
+         <a href="rba_problem.html"> <code>ProblemRBA</code> </a>
+         <a href="rba_lp.html"> <code>LinearProblem</code> </a>
+         <a href="rba_problem_matrix.html"> <code>ProblemMatrix</code> </a>
+         <a href="fba_problem.html"> <code>ProblemFBA</code> </a>
+         <a href="metabolite_block.html"> <code>MetaboliteBlock</code> </a>
+         <a href="reaction_block.html"> <code>ReactionBlock</code> </a>
+         <a href="enzyme_block.html"> <code>EnzymeBlock</code> </a>
+         <a href="process_block.html"> <code>ProcessBlock</code> </a>
+         <a href="protein_block.html"> <code>ProteinBlock</code> </a>
+         <a href="macromolecule_block.html"> <code>MacromoleculeBlock</code> </a>
+         <a href="compartment_block.html"> <code>CompartmentBlock</code> </a>
+         <a href="target_block.html"> <code>TargetBlock</code> </a>
+         <a href="parameter_block.html"> <code>ParameterBlock</code> </a>
+         <a href="module_block.html"> <code>ModuleBlock</code> </a>
+         <a href="enzyme_constraint_block.html"> <code>EnzymeConstraintBlock</code> </a>
+         <a href="process_constraint_block.html"> <code>ProcessConstraintBlock</code> </a>
+         <a href="metabolite_constraint_block.html"> <code>MetaboliteConstraintBlock</code> </a>
+         <a href="density_constraint_block.html"> <code>DensityConstraintBlock</code> </a>
+         <a href="statistics_block.html"> <code>StatisticsBlock</code> </a>
+         <a href="information_block.html"> <code>InformationBlock</code> </a>
+         <a href="description_block.html"> <code>DescriptionBlock</code> </a>
+         <a href="data_block.html"> <code>DataBlock</code> </a>
+         <a href="info_matrix.html"> <code>InfoMatrix</code> </a>
+    </div>
+      
     <main id="content" class="code-content" role="main">
       {{ content }}
     </main>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+          document.getElementById("main").style.marginLeft = "300px";
+          document.getElementById("myOpenButton").style.display = "none";
+        }
 
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.getElementById("myOpenButton").style.display = "block";
+        }
         function scrollFunction() {
           if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
             document.getElementById("myGoToTopButton").style.display = "block";
@@ -62,6 +103,7 @@
           document.documentElement.scrollTop = 0;
         }
 
+        openNav()
         window.onscroll = function() {scrollFunction()};
       </script>
   </body>
