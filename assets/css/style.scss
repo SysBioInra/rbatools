@@ -96,6 +96,10 @@ color: #00253E; }
   color: #00253E;
 }
 
+.openButton:hover {
+  background-color: #59809E;
+}
+
 #myBtn {
   display: none;
   position: fixed;
@@ -113,7 +117,7 @@ color: #00253E; }
 }
 
 #myBtn:hover {
-  background-color: #b52688;
+  background-color: #59809E;
 }
 
 #thumbnail {
