@@ -15,6 +15,41 @@ layout: api_ref_layout
 	&#9776;
 </div>
 
+<div id="main">
+  
+  <h1>Usage</h1>
+  
+  <h2 id="sec1">1. Running an existing model </h2>
+  <h3 id="sec1.1">1.1 How to run an existing model?</h3>
+  <p>
+  There are currently two available RBA models (of <i>Bacillus subtilis</i> and <i>Escherichia coli</i>), and they can be found on our github repository: <a href="https://github.com/SysBioInra/Bacterial-RBA-models">Bacterial-RBA-models</a>. 
+  To run them, or any other existing RBA model, open a console at the root of the RBApy repository, and run:
+  </p>
+  <pre><code>python solve_rba_model.py path/to/model </code></pre>
+  
+  <p>
+  where the path points to the directory containing the XML files defining the RBA model.
+  </p>
+  
+  
+  
+  <h3 id="sec1.2">1.2 How to visualize results of RBApy simulations?</h3>
+  <p>Results of RBApy simulations can be exported in formats supported for visualization of genome-scale flux data with <a href="https://escher.github.io/">Escher maps</a> and protein data with <a href="https://proteomaps.net/">Proteomaps</a>.
+  To export flux data in a format compatible with Escher maps (JSON), a line can be added to you simulation script: </p>
+  <pre><code>results.write_fluxes('path_to_file',
+                     file_type='json',
+                     merge_isozyme_reactions=True,
+                     only_nonzero=True,
+                     remove_prefix=True)</code></pre>
+  
+  <p>
+    Click to see an example of fluxes visualized using Escher maps:
+  </p>
+  <a target="_blank" href="images/example_escher_map.png">
+    <img id="thumbnail" src="images/example_escher_map.png" alt="Example Escher map">
+  </a>
+  </div>
+  
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
