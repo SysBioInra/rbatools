@@ -62,15 +62,17 @@ layout: api_ref_layout
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
   document.getElementById("main").style.marginLeft = "300px";
+  document.getElementById("myOpenButton").style.display = "none";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("myOpenButton").style.display = "block";
 }
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("myGoToTopButton").style.display = "block";
   } else {
     document.getElementById("myGoToTopButton").style.display = "none";
