@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.5.3" />
-<title>rbatools.compartment_block API documentation</title>
+<title>rbatools.macromolecule_block API documentation</title>
 <meta name="description" content="" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
@@ -16,7 +16,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title"><code>rbatools.compartment_block</code> module</h1>
+<h1 class="title"><code>rbatools.macromolecule_block</code> module</h1>
 </header>
 <section id="section-intro">
 </section>
@@ -29,39 +29,47 @@
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock"><code class="flex name class">
-<span>class <span class="ident">CompartmentBlock</span></span>
+<dt id="rbatools.macromolecule_block.MacromoleculeBlock"><code class="flex name class">
+<span>class <span class="ident">MacromoleculeBlock</span></span>
 <span>(</span><span><small>ancestors:</small> <a title="rbatools.information_block.InformationBlock" href="information_block.html#rbatools.information_block.InformationBlock">InformationBlock</a>)</span>
 </code></dt>
 <dd>
-<section class="desc"><p>Class holding information on the compartments in the model.</p>
+<section class="desc"><p>Class holding information on the macromolecules, other than proteins in the model.</p>
 <h2 id="attributes">Attributes</h2>
 <dl>
 <dt><strong><code>Elements</code></strong> :&ensp;<code>dict</code></dt>
-<dd>Each model-compartment is represented by a key.
-The values, holding information on each compartment, are dicts with predefined keys:
-'ID' : compartment ID in model (type str)
-'associatedProteins' : proteins localised to compartment (type list)
-'associatedEnzymes' : enzyme located in compartment (type list)
-'associatedReactions' : metabolic reactions located in compartment (type list)
-'associatedMacromolecules' : other macromolecules than proteins (DNA,RNA), located in compartment (type list)
-'Capacity_Constraint' : id of corresponding density constraint.</dd>
+<dd>Each model-macromolecule is represented by a key.
+The values, holding information on each macromolecule, are dicts with predefined keys:
+'ID' : macromolecule ID in model (type str).
+'ProtoID' : location independent macromolecule ID in model (type str). Equals ID without compartment-specific ending.
+'Type' : DNA or RNA (type str)
+'Compartment' : Location of the macromolecule (type str)
+'Composition' : Which building-blocs the macromolecule is composed of and what is the stoichiometry (type dict)
+'ProcessRequirements' : Which processes the macromolecule requires for synthesis and maintenance and how much (type dict)
+'SupportsProcess' : Process-machineries, this macromolecule is a subunit of (type list)
+'AssociatedTarget' : Target associated with macromolecule (type str)</dd>
 </dl></section>
 <h3>Methods</h3>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock.from_files"><code class="name flex">
-<span>def <span class="ident">from_files</span></span>(<span>self, model, Info)</span>
+<dt id="rbatools.macromolecule_block.MacromoleculeBlock.from_files"><code class="name flex">
+<span>def <span class="ident">from_files</span></span>(<span>self, model)</span>
 </code></dt>
 <dd>
-<section class="desc"></section>
+<section class="desc"><p>Derive reaction-info from RBA-model.</p>
+<h2 id="input">Input</h2>
+<p>RBA-model
+Dataframe, holding uniprot-file information.
+Dataframe, holding ID-map information.</p>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with macromolecule-info.</p></section>
 </dd>
-<dt id="rbatools.compartment_block.CompartmentBlock.overview"><code class="name flex">
+<dt id="rbatools.macromolecule_block.MacromoleculeBlock.overview"><code class="name flex">
 <span>def <span class="ident">overview</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<section class="desc"><p>Derive statistics on compartments.</p>
+<section class="desc"><p>Derive statistics on macromolecules.</p>
 <h2 id="returns">Returns</h2>
-<p>Dictionary with general numbers on compartments.</p></section>
+<p>Dictionary with general numbers on macromolecules.</p></section>
 </dd>
 </dl>
 </dd>
@@ -82,10 +90,10 @@ The values, holding information on each compartment, are dicts with predefined k
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="rbatools.compartment_block.CompartmentBlock" href="#rbatools.compartment_block.CompartmentBlock">CompartmentBlock</a></code></h4>
+<h4><code><a title="rbatools.macromolecule_block.MacromoleculeBlock" href="#rbatools.macromolecule_block.MacromoleculeBlock">MacromoleculeBlock</a></code></h4>
 <ul class="">
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.from_files" href="#rbatools.compartment_block.CompartmentBlock.from_files">from_files</a></code></li>
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.overview" href="#rbatools.compartment_block.CompartmentBlock.overview">overview</a></code></li>
+<li><code><a title="rbatools.macromolecule_block.MacromoleculeBlock.from_files" href="#rbatools.macromolecule_block.MacromoleculeBlock.from_files">from_files</a></code></li>
+<li><code><a title="rbatools.macromolecule_block.MacromoleculeBlock.overview" href="#rbatools.macromolecule_block.MacromoleculeBlock.overview">overview</a></code></li>
 </ul>
 </li>
 </ul>

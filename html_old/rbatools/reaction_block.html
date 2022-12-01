@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.5.3" />
-<title>rbatools.compartment_block API documentation</title>
+<title>rbatools.reaction_block API documentation</title>
 <meta name="description" content="" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
@@ -16,7 +16,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title"><code>rbatools.compartment_block</code> module</h1>
+<h1 class="title"><code>rbatools.reaction_block</code> module</h1>
 </header>
 <section id="section-intro">
 </section>
@@ -29,39 +29,53 @@
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock"><code class="flex name class">
-<span>class <span class="ident">CompartmentBlock</span></span>
+<dt id="rbatools.reaction_block.ReactionBlock"><code class="flex name class">
+<span>class <span class="ident">ReactionBlock</span></span>
 <span>(</span><span><small>ancestors:</small> <a title="rbatools.information_block.InformationBlock" href="information_block.html#rbatools.information_block.InformationBlock">InformationBlock</a>)</span>
 </code></dt>
 <dd>
-<section class="desc"><p>Class holding information on the compartments in the model.</p>
+<section class="desc"><p>Class holding information on the reactions in the model.</p>
 <h2 id="attributes">Attributes</h2>
 <dl>
 <dt><strong><code>Elements</code></strong> :&ensp;<code>dict</code></dt>
-<dd>Each model-compartment is represented by a key.
-The values, holding information on each compartment, are dicts with predefined keys:
-'ID' : compartment ID in model (type str)
-'associatedProteins' : proteins localised to compartment (type list)
-'associatedEnzymes' : enzyme located in compartment (type list)
-'associatedReactions' : metabolic reactions located in compartment (type list)
-'associatedMacromolecules' : other macromolecules than proteins (DNA,RNA), located in compartment (type list)
-'Capacity_Constraint' : id of corresponding density constraint.</dd>
+<dd>Each model-enzyme is represented by a key.
+The values, holding information on each enzyme, are dicts with predefined keys:
+'ID' : reaction ID in model (type str)
+'Compartment_Machinery' : Localisation of enzyme-subunit, catalysing this reaction. (type list)
+'Name' : name according to BiGG (type str)
+'OtherIDs' : Other reaction names (eg. BiGG, KEGG) (type list)
+'Formula' : Reaction formula as string (type str)
+'Reactants' : Which metabolites does this reaction consume of and many (type dict)
+'Products' : Which metabolites does this reaction produce of and many (type dict)
+'Reversible' :
+Wheter reaction is reversible (type bool)
+'Type' : Type of reaction ('normal' or 'transport') (type str)
+'Compartment_Species' : Location of the metabolites involved with this reaction (type list)
+'Enzyme' : Enzyme catalysing this reaction (type str)
+'Twins' : Isoreactions of this reactions (catalysed by iso-enzymes) (type list)
+'AssociatedTarget' :
+Wheter reaction has a flux target.</dd>
 </dl></section>
 <h3>Methods</h3>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock.from_files"><code class="name flex">
-<span>def <span class="ident">from_files</span></span>(<span>self, model, Info)</span>
+<dt id="rbatools.reaction_block.ReactionBlock.from_files"><code class="name flex">
+<span>def <span class="ident">from_files</span></span>(<span>self, model, Info, ReactionAnnotations, sbml, metaboliteBlock)</span>
 </code></dt>
 <dd>
-<section class="desc"></section>
+<section class="desc"><p>Derive reaction-info from RBA-model.</p>
+<h2 id="input">Input</h2>
+<p>RBA-model
+Dataframe, holding BiGG-reaction information.</p>
+<h2 id="returns">Returns</h2>
+<p>Dictionary with reaction-info.</p></section>
 </dd>
-<dt id="rbatools.compartment_block.CompartmentBlock.overview"><code class="name flex">
+<dt id="rbatools.reaction_block.ReactionBlock.overview"><code class="name flex">
 <span>def <span class="ident">overview</span></span>(<span>self)</span>
 </code></dt>
 <dd>
-<section class="desc"><p>Derive statistics on compartments.</p>
+<section class="desc"><p>Derive statistics on reactions.</p>
 <h2 id="returns">Returns</h2>
-<p>Dictionary with general numbers on compartments.</p></section>
+<p>Dictionary with general numbers on reactions.</p></section>
 </dd>
 </dl>
 </dd>
@@ -82,10 +96,10 @@ The values, holding information on each compartment, are dicts with predefined k
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="rbatools.compartment_block.CompartmentBlock" href="#rbatools.compartment_block.CompartmentBlock">CompartmentBlock</a></code></h4>
+<h4><code><a title="rbatools.reaction_block.ReactionBlock" href="#rbatools.reaction_block.ReactionBlock">ReactionBlock</a></code></h4>
 <ul class="">
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.from_files" href="#rbatools.compartment_block.CompartmentBlock.from_files">from_files</a></code></li>
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.overview" href="#rbatools.compartment_block.CompartmentBlock.overview">overview</a></code></li>
+<li><code><a title="rbatools.reaction_block.ReactionBlock.from_files" href="#rbatools.reaction_block.ReactionBlock.from_files">from_files</a></code></li>
+<li><code><a title="rbatools.reaction_block.ReactionBlock.overview" href="#rbatools.reaction_block.ReactionBlock.overview">overview</a></code></li>
 </ul>
 </li>
 </ul>

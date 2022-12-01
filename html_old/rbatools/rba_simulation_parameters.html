@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.5.3" />
-<title>rbatools.compartment_block API documentation</title>
+<title>rbatools.rba_simulation_parameters API documentation</title>
 <meta name="description" content="" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
@@ -16,7 +16,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title"><code>rbatools.compartment_block</code> module</h1>
+<h1 class="title"><code>rbatools.rba_simulation_parameters</code> module</h1>
 </header>
 <section id="section-intro">
 </section>
@@ -29,39 +29,45 @@
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock"><code class="flex name class">
-<span>class <span class="ident">CompartmentBlock</span></span>
-<span>(</span><span><small>ancestors:</small> <a title="rbatools.information_block.InformationBlock" href="information_block.html#rbatools.information_block.InformationBlock">InformationBlock</a>)</span>
+<dt id="rbatools.rba_simulation_parameters.SimulationParametersRBA"><code class="flex name class">
+<span>class <span class="ident">SimulationParametersRBA</span></span>
 </code></dt>
 <dd>
-<section class="desc"><p>Class holding information on the compartments in the model.</p>
+<section class="desc"><p>Class holding information on simulations with the model.</p>
 <h2 id="attributes">Attributes</h2>
-<dl>
-<dt><strong><code>Elements</code></strong> :&ensp;<code>dict</code></dt>
-<dd>Each model-compartment is represented by a key.
-The values, holding information on each compartment, are dicts with predefined keys:
-'ID' : compartment ID in model (type str)
-'associatedProteins' : proteins localised to compartment (type list)
-'associatedEnzymes' : enzyme located in compartment (type list)
-'associatedReactions' : metabolic reactions located in compartment (type list)
-'associatedMacromolecules' : other macromolecules than proteins (DNA,RNA), located in compartment (type list)
-'Capacity_Constraint' : id of corresponding density constraint.</dd>
-</dl></section>
+<p>EnzymeCapacities : rbatools.ParameterBlock object holding enzyme capacities.</p>
+<p>ProcessCapacities : rbatools.ParameterBlock object holding process capacities.</p>
+<p>CompartmentCapacities : rbatools.ParameterBlock object holding compartment capacities.</p></section>
 <h3>Methods</h3>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock.from_files"><code class="name flex">
-<span>def <span class="ident">from_files</span></span>(<span>self, model, Info)</span>
+<dt id="rbatools.rba_simulation_parameters.SimulationParametersRBA.__init__"><code class="name flex">
+<span>def <span class="ident">__init__</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Initialize self.
+See help(type(self)) for accurate signature.</p></section>
+</dd>
+<dt id="rbatools.rba_simulation_parameters.SimulationParametersRBA.export_sbtab"><code class="name flex">
+<span>def <span class="ident">export_sbtab</span></span>(<span>self, filename, return_result=False)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Exports simulation parameters in one single sbtab file</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name, under which to save SBtab-file</dd>
+<dt><strong><code>return_result</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether result should be returned. If false nothing is returned.
+Default: False</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>SBtab</p></section>
+</dd>
+<dt id="rbatools.rba_simulation_parameters.SimulationParametersRBA.from_simulation_results"><code class="name flex">
+<span>def <span class="ident">from_simulation_results</span></span>(<span>self, rbaSession)</span>
 </code></dt>
 <dd>
 <section class="desc"></section>
-</dd>
-<dt id="rbatools.compartment_block.CompartmentBlock.overview"><code class="name flex">
-<span>def <span class="ident">overview</span></span>(<span>self)</span>
-</code></dt>
-<dd>
-<section class="desc"><p>Derive statistics on compartments.</p>
-<h2 id="returns">Returns</h2>
-<p>Dictionary with general numbers on compartments.</p></section>
 </dd>
 </dl>
 </dd>
@@ -82,10 +88,11 @@ The values, holding information on each compartment, are dicts with predefined k
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="rbatools.compartment_block.CompartmentBlock" href="#rbatools.compartment_block.CompartmentBlock">CompartmentBlock</a></code></h4>
+<h4><code><a title="rbatools.rba_simulation_parameters.SimulationParametersRBA" href="#rbatools.rba_simulation_parameters.SimulationParametersRBA">SimulationParametersRBA</a></code></h4>
 <ul class="">
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.from_files" href="#rbatools.compartment_block.CompartmentBlock.from_files">from_files</a></code></li>
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.overview" href="#rbatools.compartment_block.CompartmentBlock.overview">overview</a></code></li>
+<li><code><a title="rbatools.rba_simulation_parameters.SimulationParametersRBA.__init__" href="#rbatools.rba_simulation_parameters.SimulationParametersRBA.__init__">__init__</a></code></li>
+<li><code><a title="rbatools.rba_simulation_parameters.SimulationParametersRBA.export_sbtab" href="#rbatools.rba_simulation_parameters.SimulationParametersRBA.export_sbtab">export_sbtab</a></code></li>
+<li><code><a title="rbatools.rba_simulation_parameters.SimulationParametersRBA.from_simulation_results" href="#rbatools.rba_simulation_parameters.SimulationParametersRBA.from_simulation_results">from_simulation_results</a></code></li>
 </ul>
 </li>
 </ul>

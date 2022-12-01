@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.5.3" />
-<title>rbatools.compartment_block API documentation</title>
+<title>rbatools.info_matrix API documentation</title>
 <meta name="description" content="" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
@@ -16,7 +16,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title"><code>rbatools.compartment_block</code> module</h1>
+<h1 class="title"><code>rbatools.info_matrix</code> module</h1>
 </header>
 <section id="section-intro">
 </section>
@@ -29,39 +29,45 @@
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock"><code class="flex name class">
-<span>class <span class="ident">CompartmentBlock</span></span>
-<span>(</span><span><small>ancestors:</small> <a title="rbatools.information_block.InformationBlock" href="information_block.html#rbatools.information_block.InformationBlock">InformationBlock</a>)</span>
+<dt id="rbatools.info_matrix.InfoMatrix"><code class="flex name class">
+<span>class <span class="ident">InfoMatrix</span></span>
 </code></dt>
 <dd>
-<section class="desc"><p>Class holding information on the compartments in the model.</p>
-<h2 id="attributes">Attributes</h2>
+<section class="desc"><h2 id="attributes">Attributes</h2>
 <dl>
-<dt><strong><code>Elements</code></strong> :&ensp;<code>dict</code></dt>
-<dd>Each model-compartment is represented by a key.
-The values, holding information on each compartment, are dicts with predefined keys:
-'ID' : compartment ID in model (type str)
-'associatedProteins' : proteins localised to compartment (type list)
-'associatedEnzymes' : enzyme located in compartment (type list)
-'associatedReactions' : metabolic reactions located in compartment (type list)
-'associatedMacromolecules' : other macromolecules than proteins (DNA,RNA), located in compartment (type list)
-'Capacity_Constraint' : id of corresponding density constraint.</dd>
+<dt><strong><code>Reaction_Reaction</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Mapping of model-reactions to unique BiGG IDs
+(compensation for reaction-duplication for Isozymes).
+rows: unique BiGG-reactions ; cols: model-reactions</dd>
+<dt><strong><code>Protein_Enzyme</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Conversion of Enzyme levels to levels of proteins, constituting them.
+(Gives Proteome of Metabolic Proteins, needs to be added to Process_Protein to obtain full proteome)
+rows: proteins ; cols: model-enzymes</dd>
+<dt><strong><code>ProteinWeight</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Molecular weight and number of amino-acids for each protein
+rows: proteins ; cols: AAnum and weight</dd>
+<dt><strong><code>Protein_ProcessMachinery</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Conversion of Process levels to levels of proteins, constituting their machineries.
+(Gives Proteome of Process Proteins, needs to be added to Enzyme_Protein to obtain full proteome)
+rows: proteins ; cols: model-processes</dd>
+<dt><strong><code>Process_Protein</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Indication on how much each protein requires of each process
+rows: processes ; cols: protein</dd>
+<dt><strong><code>Compartment_Protein</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Logical matrix on which protein is located in which compartment
+rows: compartments ; cols: proteins</dd>
+<dt><strong><code>S</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>Model stoichiometry-matrix
+rows: metabolites ; cols: reactions</dd>
 </dl></section>
 <h3>Methods</h3>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock.from_files"><code class="name flex">
-<span>def <span class="ident">from_files</span></span>(<span>self, model, Info)</span>
+<dt id="rbatools.info_matrix.InfoMatrix.__init__"><code class="name flex">
+<span>def <span class="ident">__init__</span></span>(<span>self, struct)</span>
 </code></dt>
 <dd>
-<section class="desc"></section>
-</dd>
-<dt id="rbatools.compartment_block.CompartmentBlock.overview"><code class="name flex">
-<span>def <span class="ident">overview</span></span>(<span>self)</span>
-</code></dt>
-<dd>
-<section class="desc"><p>Derive statistics on compartments.</p>
-<h2 id="returns">Returns</h2>
-<p>Dictionary with general numbers on compartments.</p></section>
+<section class="desc"><p>Initialize self.
+See help(type(self)) for accurate signature.</p></section>
 </dd>
 </dl>
 </dd>
@@ -82,10 +88,9 @@ The values, holding information on each compartment, are dicts with predefined k
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="rbatools.compartment_block.CompartmentBlock" href="#rbatools.compartment_block.CompartmentBlock">CompartmentBlock</a></code></h4>
+<h4><code><a title="rbatools.info_matrix.InfoMatrix" href="#rbatools.info_matrix.InfoMatrix">InfoMatrix</a></code></h4>
 <ul class="">
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.from_files" href="#rbatools.compartment_block.CompartmentBlock.from_files">from_files</a></code></li>
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.overview" href="#rbatools.compartment_block.CompartmentBlock.overview">overview</a></code></li>
+<li><code><a title="rbatools.info_matrix.InfoMatrix.__init__" href="#rbatools.info_matrix.InfoMatrix.__init__">__init__</a></code></li>
 </ul>
 </li>
 </ul>

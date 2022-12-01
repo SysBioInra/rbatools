@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.5.3" />
-<title>rbatools.compartment_block API documentation</title>
+<title>rbatools.density_constraint_block API documentation</title>
 <meta name="description" content="" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
@@ -16,7 +16,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title"><code>rbatools.compartment_block</code> module</h1>
+<h1 class="title"><code>rbatools.density_constraint_block</code> module</h1>
 </header>
 <section id="section-intro">
 </section>
@@ -29,39 +29,32 @@
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock"><code class="flex name class">
-<span>class <span class="ident">CompartmentBlock</span></span>
+<dt id="rbatools.density_constraint_block.DensityConstraintBlock"><code class="flex name class">
+<span>class <span class="ident">DensityConstraintBlock</span></span>
 <span>(</span><span><small>ancestors:</small> <a title="rbatools.information_block.InformationBlock" href="information_block.html#rbatools.information_block.InformationBlock">InformationBlock</a>)</span>
 </code></dt>
 <dd>
-<section class="desc"><p>Class holding information on the compartments in the model.</p>
+<section class="desc"><p>Class holding information on the constraints regarding the compartment-densities in the model.</p>
 <h2 id="attributes">Attributes</h2>
 <dl>
 <dt><strong><code>Elements</code></strong> :&ensp;<code>dict</code></dt>
-<dd>Each model-compartment is represented by a key.
-The values, holding information on each compartment, are dicts with predefined keys:
-'ID' : compartment ID in model (type str)
-'associatedProteins' : proteins localised to compartment (type list)
-'associatedEnzymes' : enzyme located in compartment (type list)
-'associatedReactions' : metabolic reactions located in compartment (type list)
-'associatedMacromolecules' : other macromolecules than proteins (DNA,RNA), located in compartment (type list)
-'Capacity_Constraint' : id of corresponding density constraint.</dd>
+<dd>Each model metabolite-constraint is represented by a key.
+The values, holding information on each process-constraint, are dicts with predefined keys:
+'ID' : density constraint ID in model (type str)
+'AssociatedCompartment' : ID of compartment this constraint defines the capacity for (type str)
+'Type' : Equality or inequality (type str)
+'CapacityParameterID' :
+ID of density parameter (type str)
+'CapacityParameter' : Definition of capacity parameter (type dict)
+See doc string of rbatools.rba_Session.RBA_Session.get_parameter_definition method</dd>
 </dl></section>
 <h3>Methods</h3>
 <dl>
-<dt id="rbatools.compartment_block.CompartmentBlock.from_files"><code class="name flex">
-<span>def <span class="ident">from_files</span></span>(<span>self, model, Info)</span>
+<dt id="rbatools.density_constraint_block.DensityConstraintBlock.from_files"><code class="name flex">
+<span>def <span class="ident">from_files</span></span>(<span>self, model, Cs, matrix)</span>
 </code></dt>
 <dd>
 <section class="desc"></section>
-</dd>
-<dt id="rbatools.compartment_block.CompartmentBlock.overview"><code class="name flex">
-<span>def <span class="ident">overview</span></span>(<span>self)</span>
-</code></dt>
-<dd>
-<section class="desc"><p>Derive statistics on compartments.</p>
-<h2 id="returns">Returns</h2>
-<p>Dictionary with general numbers on compartments.</p></section>
 </dd>
 </dl>
 </dd>
@@ -82,10 +75,9 @@ The values, holding information on each compartment, are dicts with predefined k
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="rbatools.compartment_block.CompartmentBlock" href="#rbatools.compartment_block.CompartmentBlock">CompartmentBlock</a></code></h4>
+<h4><code><a title="rbatools.density_constraint_block.DensityConstraintBlock" href="#rbatools.density_constraint_block.DensityConstraintBlock">DensityConstraintBlock</a></code></h4>
 <ul class="">
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.from_files" href="#rbatools.compartment_block.CompartmentBlock.from_files">from_files</a></code></li>
-<li><code><a title="rbatools.compartment_block.CompartmentBlock.overview" href="#rbatools.compartment_block.CompartmentBlock.overview">overview</a></code></li>
+<li><code><a title="rbatools.density_constraint_block.DensityConstraintBlock.from_files" href="#rbatools.density_constraint_block.DensityConstraintBlock.from_files">from_files</a></code></li>
 </ul>
 </li>
 </ul>
