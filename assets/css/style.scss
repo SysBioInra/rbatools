@@ -29,7 +29,7 @@
   .main-content p {font-family: Futura; color: #00253E; font-size: 14px; font-weight: 300;}
   .main-content i {font-family: Futura; color: #00253E; font-size: 12px; font-weight: 350; }
   .main-content dd {font-family: Futura; color: #00253E; font-size: 14px; font-weight: 300; }
-  .main-content dt {font-family: Futura; color: #00253E; font-size: 15px; font-weight: 300; }
+  .main-content dt {font-family: Futura; color: #2cee0e; font-size: 15px; font-weight: 300; }
   .main-content code {font-family: monospace; color: #00253E; font-size: 15px; font-weight: 450; }
 
 .column {
@@ -71,6 +71,18 @@
   display: block;
   transition: 0.0s;
 }
+
+.sidenav i {
+  font-family: monospace; 
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 450;
+  padding: 6px 6px 6px 25px;
+  color: #E6F4F1;
+  display: block;
+  transition: 0.0s;
+}
+
 
 .sidenav a:hover {
   color: #E6F4F1;
