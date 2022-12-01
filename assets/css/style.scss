@@ -94,7 +94,7 @@
   z-index: 99;
   cursor: pointer;
   font-size: 70px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: system-ui;
   height: 70px;
   width: 70px;
@@ -108,12 +108,12 @@
 .gototopButton {
   display: none;
   position: fixed;
-  bottom: 30px;
+  bottom: 28px;
   right: 25px;
   z-index: 99;
   cursor: pointer;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: system-ui;
   color: #00253E;
 }
