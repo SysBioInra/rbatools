@@ -23,13 +23,13 @@
   height: auto;
 }
 
-.main-content h1 {font-family: Futura; color: #00253E; }
-  .main-content h2{font-family: Bodoni MT; color: #e33809; }
-  .main-content h3{color: #00253E; }
-  .main-content h4{color: #00253E; }
-  .main-content h5{color: #00253E; }
-  .main-content h6 {color: #00253E; }
-  .main-content p {font-family: Bodoni MT; color: #e33809; }
+.main-content h1 {font-family: Futura; color: #e33809; }
+  .main-content h2{font-family: Futura; color: #e33809; }
+  .main-content h3{font-family: Futura; color: #e33809; }
+  .main-content h4{font-family: Futura; color: #e33809; }
+  .main-content h5{font-family: Futura; color: #e33809; }
+  .main-content h6 {font-family: Futura; color: #e33809; }
+  .main-content p {font-family: Bodoni MT; color: #00253E; }
 
 .column {
   padding: 10px;
@@ -61,6 +61,7 @@
 }
 
 .sidenav a {
+  font-family: Futura;
   padding: 6px 6px 6px 25px;
   text-decoration: none;
   font-size: 20px;
