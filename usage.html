@@ -69,11 +69,13 @@ To export flux data in a format compatible with Escher maps (JSON), a line can b
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
   document.getElementById("main").style.marginLeft = "300px";
+  document.getElementById("myOpenButton").style.display = "none";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("myOpenButton").style.display = "block";
 }
 
 function scrollFunction() {

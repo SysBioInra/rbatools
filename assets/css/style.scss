@@ -99,6 +99,7 @@ color: #00253E; }
 }
 
 .openButton {
+  display: block;
   position: fixed;
   bottom: 30px;
   left: 30px;
@@ -107,7 +108,7 @@ color: #00253E; }
   font-size: 70px;
   height: 70px;
   width: 70px;
-  color: #e6153f;
+  color: #00253E;
 }
 
 .openButton:hover {
