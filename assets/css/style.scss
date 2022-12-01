@@ -33,7 +33,7 @@
   .main-content i {font-family: Bodoni MT; color: #00253E; }
   .main-content dd {font-family: Bodoni MT; color: #00253E; }
   .main-content dt {font-family: Bodoni MT; color: #00253E; }
-  .main-content code {font-family: Consolas; color: #00253E; }
+  .main-content code {font-family: monospace; color: #00253E; }
 
 .column {
   padding: 10px;
@@ -126,26 +126,6 @@
 
 .gototopButton:hover {
   color: #59809E;
-}
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 50;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #00253E;
-  color: #E6F4F1;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #59809E;
 }
 
 #thumbnail {
