@@ -9,6 +9,10 @@ layout: userguide_layout
     <div id="myOpenButton" class="openButton" onclick="openNav()">
       &#9776;
     </div>
+
+    <div id="myGoToTopButton" class="gototopButton" onclick="topFunction()">
+      &#10514;
+    </div>
     
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -78,9 +82,9 @@ function closeNav() {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.display = "block";
+    document.getElementById("myGoToTopButton").style.display = "block";
   } else {
-    document.getElementById("myBtn").style.display = "none";
+    document.getElementById("myGoToTopButton").style.display = "none";
   }
 }
 
