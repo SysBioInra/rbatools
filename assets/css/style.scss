@@ -89,16 +89,17 @@ color: #00253E; }
 
 .openButton {
   position: fixed;
-  top: 200px;
+  top: 220px;
   left: 20px;
   cursor: pointer;
   font-size: 30px;
+  height: 30px;
+  width: 30px;
   color: #00253E;
-  background-color: #ffffff;
 }
 
 .openButton:hover {
-  background-color: #59809E;
+  color: #59809E;
 }
 
 #myBtn {
