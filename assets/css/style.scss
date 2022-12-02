@@ -23,6 +23,10 @@
   height: auto;
 }
 
+body {
+  background-color: lightblue;
+}
+
 .module-header {
 	background-color: #E6F4F1;
 	background-image: none;
@@ -44,7 +48,7 @@
 .main-content h1 {font-family: Futura; color: #00253E; font-size: 26px; font-weight: 600;}
   .main-content h2{font-family: Futura; color: #00253E; font-size: 22px; font-weight: 500; }
   .main-content h3{font-family: Futura; color: #00253E; font-size: 18px; font-weight: 400; }
-  .code-content h4{font-family: Futura; color: #00253E; font-size: 16px; font-weight: 400; }
+  .main-content h4{font-family: Futura; color: #00253E; font-size: 16px; font-weight: 400; }
   .main-content p {font-family: Futura; color: #00253E; font-size: 14px; font-weight: 300;}
   .main-content i {font-family: Futura; color: #00253E; font-size: 12px; font-weight: 350; }
   .main-content dd {font-family: Futura; color: #00253E; font-size: 14px; font-weight: 300; }
