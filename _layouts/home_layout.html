@@ -49,6 +49,9 @@
     <div id="repologo" class="repologo_button" onclick="parent.open('https://github.com/SysBioInra/rbatools')">
       <img src="images/GitHub-Mark-120px-plus.png" width="30" height="30">
     </div>
+    <div id="myOpenButton" class="openButton" onclick="openNav()">
+      &#9776;
+    </div>
     <div id="myGoToTopButton" class="gototopButton" onclick="topFunction()">
       &#10514;
     </div>
@@ -64,6 +67,17 @@
     </main>
 
       <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+        document.getElementById("myOpenButton").style.display = "none";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("myOpenButton").style.display = "block";
+      }
         function scrollFunction() {
           if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
             document.getElementById("myGoToTopButton").style.display = "block";
@@ -77,6 +91,7 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
+        openNav()
         window.onscroll = function() {scrollFunction()};
       </script>
   </body>
