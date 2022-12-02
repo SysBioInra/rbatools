@@ -167,6 +167,15 @@
   cursor: pointer;
 }
 
+.repologo_button {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  z-index: 1;
+  cursor: pointer;
+}
+
 
 .gototopButton:hover {
   color: #59809E;
