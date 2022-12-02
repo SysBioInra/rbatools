@@ -1,16 +1,28 @@
 ---
 layout: home_layout
 ---
-
 <!DOCTYPE html>
+
 <html>
+
 <body>
+
+<div id="main">
 
 	<p>
 		<b>RBAtools</b> is a programming interface for <a href="https://rba.inrae.fr">Resource Balance Analysis</a> (RBA) models based on the <a href="https://github.com/SysBioInra/RBApy">RBApy</a> package.
 		It includes methods to solve, modify, and analyse RBA models and to export model information and simulation results into various formats.
 	</p>
 
+
+	<p>
+		<b>RBAtools</b> is based on linear-programming and therefore requires a linear-optimization package. 
+		We strongly suggest using the (propriatary) CPLEX tool, which is available under a free academic license.
+
+		Nonetheless we included functionality with the freely available swiglpk solver, however this sometimes is not able to obtain satisfactory solutions.
+	</p>
+	
+	
 	<p>
 		RBA models have already been developed for:
 		<ul>
@@ -36,6 +48,12 @@ layout: home_layout
 		visit the <a href="usage.html">usage site</a>.
 	</p>
 
+</div>
+
+<script>	
+</script>
+
 </body>
+
 </html>
 
