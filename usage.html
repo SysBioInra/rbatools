@@ -10,25 +10,22 @@ layout: userguide_layout
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8676;</a>
   <ol type="I">
-    <a href="usage.html#sec1">Running an existing model</a>
-    <ol>
-      <a href="usage.html#sec1.1">How to run an existing model?</a>
-      <a href="usage.html#sec1.2">How to visualize results of RBApy simulation?</a>
-      <a href="usage.html#sec1.3">How to change the medium?</a>
-      <a href="usage.html#sec1.4">How to change model parameters?</a>
-    </ol>
+    <a href="usage.html#sec1">Import as library in Python</a>
+    <a href="usage.html#sec2">Scripts</a>
+    <a href="usage.html#sec3">Command line interface</a>
+    <a href="usage.html#sec4">Tutorials</a>
   </ol>
 </div>
 
 <div id="main">
-<h4>Import as library in Python:</h4>
+<h4 id="sec1">Import as library in Python:</h4>
 <p>
 When used in own Python code, <b>RBAtools</b> can be imported as follows:
 </p>
 
 <code>import rbatools</code>
 
-<h4>Provided scripts:</h4>
+<h4 id="sec2">Scripts:</h4>
 <p>
 We provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
 </p>
@@ -48,7 +45,7 @@ This script imports an rba-model and exports its component-structure as tabular 
 
 <code>python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir dedicated/location/of/results</code>
 
-<h4>Command line interface:</h4>
+<h4 id="sec3">Command line interface:</h4>
 <p>
 If the <b>RBAtools</b> packaage is installed properly, the aforementioned scripts can also be executed as command-line tools The respective commands (with identical arguments as scripts) for the terminal are:
 <b>run_growth_rate_optimization.py</b>
@@ -60,7 +57,7 @@ This script runs a growth-rate optimisation and stores the obtained results as s
 </p>
 <code>generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results</code>
 	
-<h4>Tutorials:</h4>
+<h4 id="sec4">Tutorials:</h4>
 <p>
 <b>MyBinder Tutorial:</b>
 We generated a <a href="https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb">short tutorial, to be provided online with mybinder.
