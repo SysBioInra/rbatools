@@ -34,12 +34,6 @@
             <img src="images/RBA_APIreference.svg">
           </a>
         </div>
-        <div class="column">
-          <a href="https://github.com/SysBioInra/rbatools"><img src="images/GitHub-Mark-120px-plus.png" width="30" height="30"></a>
-        </div>
-        <div class="column">
-          <a href="https://rba.inrae.fr"><img src="images/rba_logo.svg" width="40" height="40"></a>
-        </div>
       </div>
       <!--h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2-->
       <!--
@@ -48,6 +42,13 @@
       {% endif %}
     -->
     </header>
+
+    <div id="rbalogo" class="rbalogo_button" onclick="parent.open('https://rba.inrae.fr')">
+      <img src="images/rba_logo.svg" width="50" height="50">
+    </div>
+    <div id="repologo" class="repologo_button" onclick="parent.open('https://github.com/SysBioInra/rbatools')">
+      <img src="images/GitHub-Mark-120px-plus.png" width="30" height="30">
+    </div>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
