@@ -23,6 +23,15 @@
   height: auto;
 }
 
+.module-header {
+	background-color: #E6F4F1;
+	background-image: none;
+	padding-top: 20px;
+	padding-bottom: 10px;
+  margin-bottom: 0;
+  height: auto;
+}
+
 .code-content h1 {font-family: Futura; color: #00253E; font-size: 26px; font-weight: 600;}
   .code-content h2{font-family: Futura; color: #00253E; font-size: 22px; font-weight: 500; }
   .code-content h3{font-family: Futura; color: #00253E; font-size: 22px; font-weight: 500; }
@@ -147,6 +156,7 @@
   font-family: system-ui;
   color: #00253E;
 }
+
 
 .gototopButton:hover {
   color: #59809E;
