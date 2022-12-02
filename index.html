@@ -6,7 +6,17 @@ layout: home_layout
 <html>
 
 <body>
-
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8676;</a>
+		  <ol type="I">
+			<a href="index.html#sec1">Linear solver support</a>
+			<a href="index.html#sec2">Online tutorial</a>
+			<a href="index.html#sec3">Model availability</a>
+			<a href="index.html#sec4">Authors</a>
+			<a href="index.html#sec4">License</a>
+		  </ol>
+		</div>
+		
 <div id="main">
 
 	<p>
@@ -17,7 +27,7 @@ layout: home_layout
 		Further information and tutorials can be found on our <a href="https://github.com/SysBioInra/rbatools">GitHub</a> page
 	</p>
 
-	<h4>Linear solver support:</h4>
+	<h4 id="sec1">Linear solver support:</h4>
 	<p>
 		<b>RBAtools</b> is based on linear-programming and therefore requires a linear-optimization package. 
 		We strongly suggest using the (propriatary) <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-optimizer">CPLEX</a> tool, which is available under a free academic license.
@@ -25,12 +35,12 @@ layout: home_layout
 		Nonetheless we included functionality with the freely available <a href="https://github.com/biosustain/swiglpk">swiglpk</a> solver, however this sometimes is not able to obtain satisfactory solutions.
 	</p>
 
-	<h4>Online tutorial:</h4>
+	<h4 id="sec2">Online tutorial:</h4>
 	<p>
 		An <a href="https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb">online tutorial</a> is available via <a href="https://mybinder.org">Binder</a>
 	</p>
 
-	<h4>Model availability:</h4>
+	<h4 id="sec3">Model availability:</h4>
 	<p>
 		RBA models have already been developed for:
 		<ul>
@@ -43,12 +53,12 @@ layout: home_layout
 		</p>
 	</p>
 
-	<h4>Authors:</h4>
+	<h4 id="sec4">Authors:</h4>
 	<p>
 	<b>Bodeit, O., Liebermeister, W. and Goelzer A.</b>
 	</p>
 
-	<h4>License:</h4>
+	<h4 id="sec5">License:</h4>
 	<p>
 	<b>Copyright (c) 2022 INRAE - MaIAGE - France.</b>
 	</p>
