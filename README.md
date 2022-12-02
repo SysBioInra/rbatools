@@ -101,12 +101,7 @@ and
 
 ## Documentation
 
-### HTML documentation
-
-A subdirectory with the libraries documentation in HTML format is provided with this repository.
-Please open on this file:
-
-    docs/html/rbatools/index.html
+A full api-reference documentation can be found at: https://sysbioinra.github.io/rbatools/api_ref
 
 ## Model availability
 RBA models can be obtained from the repository https://github.com/SysBioInra/Bacterial-RBA-models
