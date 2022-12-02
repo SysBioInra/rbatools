@@ -140,6 +140,7 @@
   color: #00253E;
 }
 
+
 .openButton:hover {
   color: #59809E;
 }
@@ -155,6 +156,15 @@
   font-weight: 600;
   font-family: system-ui;
   color: #00253E;
+}
+
+.rbalogo_button {
+  display: block;
+  position: absolute;
+  top: 28px;
+  right: 25px;
+  z-index: 1;
+  cursor: pointer;
 }
 
 
