@@ -53,6 +53,9 @@
     <div id="myGoToTopButton" class="gototopButton" onclick="topFunction()">
       &#10514;
     </div>
+    <div id="myOpenButton" class="openButton" onclick="openNav()">
+      &#9776;
+    </div>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
@@ -66,6 +69,18 @@
     </main>
 
     <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+        document.getElementById("myOpenButton").style.display = "none";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("myOpenButton").style.display = "block";
+      }
+      
       function scrollFunction() {
         if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
           document.getElementById("myGoToTopButton").style.display = "block";
@@ -73,12 +88,14 @@
           document.getElementById("myGoToTopButton").style.display = "none";
         }
       }
-
+      
       // When the user clicks on the button, scroll to the top of the document
       function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
+      
+      openNav()
       window.onscroll = function() {scrollFunction()};
     </script>
 </body>
