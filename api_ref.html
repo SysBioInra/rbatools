@@ -4,14 +4,6 @@ layout: api_ref_layout
 <!DOCTYPE html>
 <html>
 	<body>
-
-<div id="myOpenButton" class="openButton" onclick="openNav()">
-&#9776;
-</div>
-
-<div id="myGoToTopButton" class="gototopButton" onclick="topFunction()">
-  &#10514;
-</div>
       
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -48,34 +40,6 @@ layout: api_ref_layout
 </div>
 
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
-  document.getElementById("myOpenButton").style.display = "none";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("myOpenButton").style.display = "block";
-}
-
-function scrollFunction() {
-  if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
-    document.getElementById("myGoToTopButton").style.display = "block";
-  } else {
-    document.getElementById("myGoToTopButton").style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-openNav()
-window.onscroll = function() {scrollFunction()};
 </script>
 
 	</body>
