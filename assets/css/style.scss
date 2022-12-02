@@ -115,10 +115,14 @@
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  left: 25px;
+  left: 5px;
   font-size: 36px;
-  margin-left: 50px;
+  margin-left: 5px;
   color: #00253E;
+}
+
+.sidenav .closebtn:hover {
+  color: #E6F4F1;
 }
 
 @media screen and (max-height: 450px) {
