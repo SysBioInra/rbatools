@@ -21,27 +21,42 @@ layout: userguide_layout
 </div>
 
 <div id="main">
-	<h1>Installation</h1>
-		<p>
-		<b>RBApy</b> can be installed with Python 2.7 and Python 3.5 (or any later version compatible with the cplex package).
-	</p>
-	<h2>1. Install Python</h2>
+<h4>Import as library in Python:</h4>
 <p>
-	If Python is not installed on your own computer, you need to install it. 
-Go to the website  <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>. 
-Download the appropriate python release for your system and install it.
+When used in own Python code, <b>RBAtools</b> can be imported as follows:
+<code>import rbatools</code>
 </p>
-	<h2>2. Install CPLEX</h2>
-	<p>
-		IBM&reg; CPLEX is an optimization software package. <b>RBApy</b> uses this package for the generation and checking of feasibility of the Linear Programming (LP) problem. CPLEX requires a licence to run, and one can be obtained for free if you have an academic email address. This you can do as follows:
 
-		<ul>
-		  <li><i>Create an account on the <a href="https://ibm.onthehub.com/">IBM website</a></i></li>
-		  <li><i>Request faculty eligibility with your institutional email address: go to your account > eligibility tab. Follow instructions.</i></li>
-		  <li><i>Look for latest IBM ILOG CPLEX faculty version, complete survey and download.</i></li>
-		</ul> 
+<h4>Provided scripts:</h4>
+<p>
+We provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
+<b>run_growth_rate_optimization.py</b>
+This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
+<code>python run_growth_rate_optimization.py path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results</code>
+<b>generate_sbtab_of_model_for_html.py</b>
+This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models) The arguments to provide are an rba-model and the optional argument for the path where the results should be stored. To run it, execute the following command in your terminal:
+<code>python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir dedicated/location/of/results</code>
+</p>
 
-	<p>After you have successfuly downloaded the package you need to install it and setup the Python API. 	</p>
+<h4>Command line interface:</h4>
+<p>
+If the <b>RBAtools</b> packaage is installed properly, the aforementioned scripts can also be executed as command-line tools The respective commands (with identical arguments as scripts) for the terminal are:
+<b>run_growth_rate_optimization.py</b>
+This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
+<code>run-growth-rate-optimization path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results</code>
+And: 
+<code>generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results</code>
+</p>
+	
+<h4>Tutorials:</h4>
+<p>
+<b>MyBinder Tutorial:</b>
+We generated a <a href="https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb">short tutorial, to be provided online with mybinder.
+<b>Instructional Jupyter notebooks:</b>
+Our <a href="https://github.com/SysBioInra/rbatools">repository</a> includes various instructional jupyter notebooks, exemplifying the use of rbatools.
+</p>
+
+
 </div>
 
 <script>
