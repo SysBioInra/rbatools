@@ -35,7 +35,7 @@ We provided scripts with basic functionalities of rbatools in the subdirectory "
 This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
 </p>
 
-<code>python run_growth_rate_optimization.py path/to/rba/model --lp-solver SOLVER_OF_CHOICE --output-dir ...</code>
+<code>python run_growth_rate_optimization.py path/to/model --lp-solver SOLVER_OF_CHOICE --output-dir ...</code>
 
 <p>
 	<b>generate_sbtab_of_model_for_html.py</b>
@@ -43,7 +43,7 @@ This script runs a growth-rate optimisation and stores the obtained results as s
 This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models) The arguments to provide are an rba-model and the optional argument for the path where the results should be stored. To run it, execute the following command in your terminal:
 </p>
 
-<code>python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir ...</code>
+<code>python generate_sbtab_of_model_for_html.py path/to/model --output-dir ...</code>
 
 <h4 id="sec3">Command line interface:</h4>
 <p>
@@ -51,11 +51,11 @@ If the <b>RBAtools</b> packaage is installed properly, the aforementioned script
 <b>run_growth_rate_optimization.py</b>
 This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
 </p>
-<code>run-growth-rate-optimization path/to/rba/model --lp-solver SOLVER_OF_CHOICE --output-dir ...</code>
+<code>run-growth-rate-optimization path/to/model --lp-solver SOLVER_OF_CHOICE --output-dir ...</code>
 <p>
 	And: 
 </p>
-<code>generate-sbtab-of-model-for-html path/to/rba/model --output-dir ...</code>
+<code>generate-sbtab-of-model-for-html path/to/model --output-dir ...</code>
 	
 <h4 id="sec4">Tutorials:</h4>
 <p>
