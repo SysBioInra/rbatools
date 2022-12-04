@@ -32,7 +32,7 @@
         function openNav() {
           document.getElementById("content").style.marginRight = "30px";
           document.getElementById("sidebar").style.width = "430px";
-          const sbar = document.querySelector('sidebar');
+          const sbar = document.getElementById("sidebar");
           const sbarstyle = window.getComputedStyle(sbar);
           const sbarwidth = sbarstyle.getPropertyValue('width');
           document.getElementById("content").style.marginLeft = sbarwidth;
@@ -43,10 +43,4 @@
         </script>
   </body>
 </html>
-
-
-
-const sbar = document.querySelector('sidebar');
-const sbarstyle = window.getComputedStyle(sbar);
-sbarstyle.getPropertyValue('width');
 
