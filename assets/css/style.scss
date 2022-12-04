@@ -106,7 +106,7 @@ nav a {
   font-size: 18px;
   font-weight: 500;
   padding: 6px 6px 6px 25px;
-  color: #E6F4F1;
+  color: #eb2d0b;
   display: block;
   transition: 0.0s;
 }
@@ -118,6 +118,42 @@ nav code {
   font-weight: 500;
   padding: 6px 10px 10px 10px;
   color: #E6F4F1;
+  background-color: #59809E;
+  display: block;
+  transition: 0.0s;
+}
+
+nav h1 {
+  font-family: monospace; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px 10px 10px;
+  color: #0aed19;
+  background-color: #59809E;
+  display: block;
+  transition: 0.0s;
+}
+
+nav h3 {
+  font-family: monospace; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px 10px 10px;
+  color: #0a0aea;
+  background-color: #59809E;
+  display: block;
+  transition: 0.0s;
+}
+
+nav h4 {
+  font-family: monospace; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px 10px 10px;
+  color: #f30ae7;
   background-color: #59809E;
   display: block;
   transition: 0.0s;
