@@ -96,8 +96,8 @@ nav {
   overflow-x: hidden;
   overflow: auto !important;
   transition: 0.0s;
-  padding-top: 150px;
-  padding-bottom: 30px;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
 }
 
 nav a {
