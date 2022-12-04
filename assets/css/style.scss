@@ -85,6 +85,20 @@ body {
   padding-bottom: 30px;
 }
 
+nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #E6F4F1;
+  overflow-x: hidden;
+  transition: 0.0s;
+  padding-top: 200px;
+  padding-bottom: 30px;
+}
+
 .sidenav a {
   font-family: Futura; 
   text-decoration: none;
