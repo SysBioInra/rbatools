@@ -106,7 +106,7 @@ nav a {
   font-size: 18px;
   font-weight: 500;
   padding: 6px 6px 6px 25px;
-  color: #eb2d0b;
+  color: #E6F4F1;
   display: block;
   transition: 0.0s;
 }
@@ -186,7 +186,16 @@ nav h4 {
   color: #00253E;
 }
 
+nav a:hover {
+  color: #00253E;
+}
+
 .sidenav code:hover {
+  color: #00253E;
+  background-color: #59809E;
+}
+
+nav code:hover {
   color: #00253E;
   background-color: #59809E;
 }
