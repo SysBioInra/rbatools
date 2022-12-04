@@ -86,40 +86,40 @@ body {
 }
 
 nav {
-  height: 100%  !important;
-  width: 0  !important;
+  height: 100%;
+  width: 0;
   position: fixed !important;
-  z-index: 1  !important;
-  top: 0  !important;
-  left: 0  !important;
-  background-color: #59809E  !important;
-  overflow-x: hidden  !important;
-  transition: 0.0s  !important;
-  padding-top: 100px  !important;
-  padding-bottom: 30px  !important;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #59809E;
+  overflow-x: hidden;
+  transition: 0.0s;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 nav a {
-  font-family: monospace  !important; 
-  text-decoration: none  !important;
-  font-size: 18px  !important;
-  font-weight: 500  !important;
-  padding: 6px 6px 6px 25px  !important;
-  color: #E6F4F1  !important;
-  display: block  !important;
-  transition: 0.0s  !important;
+  font-family: monospace; 
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 6px 6px 25px;
+  color: #E6F4F1;
+  display: block;
+  transition: 0.0s;
 }
 
 nav code {
-  font-family: monospace  !important; 
-  text-decoration: none  !important;
-  font-size: 16px  !important;
-  font-weight: 500  !important;
-  padding: 6px 10px 10px 10px  !important;
-  color: #E6F4F1  !important;
-  background-color: #59809E  !important;
-  display: block  !important;
-  transition: 0.0s  !important;
+  font-family: monospace; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px 10px 10px;
+  color: #E6F4F1;
+  background-color: #59809E;
+  display: block;
+  transition: 0.0s;
 }
 
 .sidenav a {
