@@ -59,7 +59,7 @@
 
     <main id="content" class="main-content" role="main">
       {{ content }}
-      <footer class="site-footer">
+      <footer id="footer" class="site-footer" role="footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
         {% endif %}
@@ -71,12 +71,14 @@
       function openNav() {
         document.getElementById("mySidenav").style.width = "300px";
         document.getElementById("main").style.marginLeft = "300px";
+        document.getElementById("footer").style.marginLeft = "300px";
         document.getElementById("myOpenButton").style.display = "none";
       }
       
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("footer").style.marginLeft= "0";
         document.getElementById("myOpenButton").style.display = "block";
       }
       
