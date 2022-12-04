@@ -28,9 +28,16 @@
     </div>
       
     <main id="content" class="code-content" role="main">
-      {{ content }}
+      {{ content }}      
     </main>
+
     <script>
+        function openNav() {
+          document.getElementById("sidebar").style.width = "300px";
+          document.getElementById("content").style.marginLeft = "300px";
+          document.getElementById("footer").style.marginLeft = "300px";
+        }
+
         function scrollFunction() {
           if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
             document.getElementById("myGoToTopButton").style.display = "block";
@@ -44,6 +51,7 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
+        openNav()
         window.onscroll = function() {scrollFunction()};
         </script>
   </body>
