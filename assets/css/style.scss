@@ -131,7 +131,7 @@ nav h1 {
   padding: 6px 10px 10px 10px;
   color: #0aed19 !important;
   background-color: #59809E;
-  display: block;
+  display: none !important;
   transition: 0.0s;
 }
 
@@ -141,7 +141,7 @@ nav h3 {
   font-size: 16px;
   font-weight: 500;
   padding: 6px 10px 10px 10px;
-  color: #0a0aea;
+  color: #0a0aea !important;
   background-color: #59809E;
   display: block;
   transition: 0.0s;
