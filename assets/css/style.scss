@@ -175,6 +175,7 @@ nav h4 {
 
 .sidenav a:hover {
   color: #00253E;
+  text-decoration: none !important;
 }
 
 nav a:hover {
@@ -262,15 +263,6 @@ nav code:hover {
   position: absolute;
   top: 17px;
   right: 18px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.rbalogo_button_test {
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 18px;
   z-index: 1;
   cursor: pointer;
 }
