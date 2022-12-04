@@ -32,11 +32,21 @@
         function openNav() {
           document.getElementById("content").style.marginRight = "30px";
           document.getElementById("sidebar").style.width = "430px";
-          document.getElementById("content").style.marginLeft = document.getElementById("sidebar").style.getPropertyValue("width");
-          document.getElementById("footer").style.marginLeft = document.getElementById("sidebar").style.width;
+          const sbar = document.querySelector('sidebar');
+          const sbarstyle = window.getComputedStyle(sbar);
+          const sbarwidth = sbarstyle.getPropertyValue('width');
+          document.getElementById("content").style.marginLeft = sbarwidth;
+          document.getElementById("footer").style.marginLeft = sbarwidth;
           document.getElementById("myOpenButton").style.display = "none";
         }
         openNav()
         </script>
   </body>
 </html>
+
+
+
+const sbar = document.querySelector('sidebar');
+const sbarstyle = window.getComputedStyle(sbar);
+sbarstyle.getPropertyValue('width');
+
