@@ -112,11 +112,11 @@ nav a {
 }
 
 nav code {
-  font-family: monospace; 
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 6px 10px 10px 10px;
+  font-family: monospace !important; 
+  text-decoration: none !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  padding: 6px 10px 10px 10px !important;
   color: #E6F4F1;
   background-color: #59809E;
   display: block;
