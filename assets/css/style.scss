@@ -83,7 +83,7 @@ body {
   overflow-x: hidden;
   transition: 0.0s;
   padding-top: 200px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 nav {
@@ -101,8 +101,6 @@ nav {
   transition: 0.0s;
   padding-top: 100px !important;
   padding-bottom: 50px !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
 }
 
 nav a {
@@ -110,7 +108,7 @@ nav a {
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
-  padding: 6px 0 6px 0;
+  padding: 6px 6px 6px 25px !important;
   color: #E6F4F1;
   display: block;
   transition: 0.0s;
