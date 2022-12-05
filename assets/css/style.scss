@@ -73,6 +73,8 @@ body {
 .sidenav {
   height: 100%;
   width: 0;
+  min-width: 250px;
+  max-width: 400px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -86,7 +88,7 @@ body {
 
 nav {
   height: 100%;
-  width: auto;
+  width: 0;
   min-width: 250px;
   max-width: 400px;
   position: fixed !important;
@@ -119,7 +121,7 @@ nav code {
   text-decoration: none !important;
   font-size: 16px !important;
   font-weight: 500 !important;
-  padding: 6px 10px 10px 10px !important;
+  padding: 6px 6px 6px 25px !important;
   color: #ea0fe6;
   background-color: #59809E;
   display: block;
