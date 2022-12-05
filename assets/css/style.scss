@@ -81,7 +81,7 @@ body {
   left: 0;
   background-color: #59809E;
   overflow-x: hidden;
-  overflow: auto;
+  overflow: auto !important;
   transition: 0.0s;
   padding-top: 200px;
   padding-bottom: 50px;
