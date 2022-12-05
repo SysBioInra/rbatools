@@ -73,7 +73,7 @@ body {
 .sidenav {
   height: 100%;
   width: auto;
-  min-width: 0px;
+  min-width: 100px;
   max-width: 300px;
   position: fixed;
   z-index: 1;
@@ -90,7 +90,7 @@ nav {
   height: 100%;
   width: auto;
   min-width: 250px;
-  max-width: 300px;
+  max-width: 400px;
   position: fixed !important;
   z-index: 1;
   top: 0;
