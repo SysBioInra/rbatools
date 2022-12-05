@@ -9,36 +9,51 @@ layout: api_ref_layout
       
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8676;</a>
-   <a href="rba_session.html"> <code>SessionRBA</code> </a>
-   <a href="rba_model_structure.html"> <code>ModelStructureRBA</code> </a>
-   <a href="rba_simulation_data.html"> <code>SimulationDataRBA</code> </a>
-   <a href="rba_simulation_parameters.html"> <code>SimulationParametersRBA</code> </a>
-   <a href="rba_problem.html"> <code>ProblemRBA</code> </a>
-   <a href="rba_lp.html"> <code>LinearProblem</code> </a>
-   <a href="rba_problem_matrix.html"> <code>ProblemMatrix</code> </a>
-   <a href="fba_problem.html"> <code>ProblemFBA</code> </a>
-   <a href="metabolite_block.html"> <code>MetaboliteBlock</code> </a>
-   <a href="reaction_block.html"> <code>ReactionBlock</code> </a>
-   <a href="enzyme_block.html"> <code>EnzymeBlock</code> </a>
-   <a href="process_block.html"> <code>ProcessBlock</code> </a>
-   <a href="protein_block.html"> <code>ProteinBlock</code> </a>
-   <a href="macromolecule_block.html"> <code>MacromoleculeBlock</code> </a>
-   <a href="compartment_block.html"> <code>CompartmentBlock</code> </a>
-   <a href="target_block.html"> <code>TargetBlock</code> </a>
-   <a href="parameter_block.html"> <code>ParameterBlock</code> </a>
-   <a href="module_block.html"> <code>ModuleBlock</code> </a>
-   <a href="enzyme_constraint_block.html"> <code>EnzymeConstraintBlock</code> </a>
-   <a href="process_constraint_block.html"> <code>ProcessConstraintBlock</code> </a>
-   <a href="metabolite_constraint_block.html"> <code>MetaboliteConstraintBlock</code> </a>
-   <a href="density_constraint_block.html"> <code>DensityConstraintBlock</code> </a>
-   <a href="statistics_block.html"> <code>StatisticsBlock</code> </a>
-   <a href="information_block.html"> <code>InformationBlock</code> </a>
-   <a href="description_block.html"> <code>DescriptionBlock</code> </a>
-   <a href="data_block.html"> <code>DataBlock</code> </a>
-   <a href="info_matrix.html"> <code>InfoMatrix</code> </a>
+   <a href="rba_session.html"> <code>rba_session.SessionRBA</code> </a>
+   <a href="rba_model_structure.html"> <code>rba_model_structure.ModelStructureRBA</code> </a>
+   <a href="rba_simulation_data.html"> <code>rba_simulation_data.SimulationDataRBA</code> </a>
+   <a href="rba_simulation_parameters.html"> <code>rba_simulation_parameters.SimulationParametersRBA</code> </a>
+   <a href="rba_problem.html"> <code>rba_problem.ProblemRBA</code> </a>
+   <a href="rba_lp.html"> <code>rba_lp.LinearProblem</code> </a>
+   <a href="rba_problem_matrix.html"> <code>rba_problem_matrix.ProblemMatrix</code> </a>
+   <a href="fba_problem.html"> <code>fba_problem.ProblemFBA</code> </a>
+   <a href="metabolite_block.html"> <code>metabolite_block.MetaboliteBlock</code> </a>
+   <a href="reaction_block.html"> <code>reaction_block.ReactionBlock</code> </a>
+   <a href="enzyme_block.html"> <code>enzyme_block.EnzymeBlock</code> </a>
+   <a href="process_block.html"> <code>process_block.ProcessBlock</code> </a>
+   <a href="protein_block.html"> <code>protein_block.ProteinBlock</code> </a>
+   <a href="macromolecule_block.html"> <code>macromolecule_block.MacromoleculeBlock</code> </a>
+   <a href="compartment_block.html"> <code>compartment_block.CompartmentBlock</code> </a>
+   <a href="target_block.html"> <code>target_block.TargetBlock</code> </a>
+   <a href="parameter_block.html"> <code>parameter_block.ParameterBlock</code> </a>
+   <a href="module_block.html"> <code>module_block.ModuleBlock</code> </a>
+   <a href="enzyme_constraint_block.html"> <code>enzyme_constraint_block.EnzymeConstraintBlock</code> </a>
+   <a href="process_constraint_block.html"> <code>process_constraint_block.ProcessConstraintBlock</code> </a>
+   <a href="metabolite_constraint_block.html"> <code>metabolite_constraint_block.MetaboliteConstraintBlock</code> </a>
+   <a href="density_constraint_block.html"> <code>density_constraint_block.DensityConstraintBlock</code> </a>
+   <a href="statistics_block.html"> <code>statistics_block.StatisticsBlock</code> </a>
+   <a href="information_block.html"> <code>information_block.InformationBlock</code> </a>
+   <a href="description_block.html"> <code>description_block.DescriptionBlock</code> </a>
+   <a href="data_block.html"> <code>data_block.DataBlock</code> </a>
+   <a href="info_matrix.html"> <code>info_matrix.InfoMatrix</code> </a>
 </div>
 
 <div id="main">
+	<p>
+      The RBAtools library (rbatools) 
+	</p>
+	<p>
+		Further information and tutorials can be found on our <a href="https://github.com/SysBioInra/rbatools">GitHub</a> page
+	</p>
+
+	<h4 id="sec1"><b>Linear solver support:</b></h4>
+	<p>
+		RBAtools is based on linear-programming and therefore requires a linear-optimization package. 
+		We strongly suggest using the (proprietary) <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-optimizer">CPLEX</a> tool, which is available under a free academic license.
+
+		Nonetheless we included functionality with the freely available <a href="https://github.com/biosustain/swiglpk">swiglpk</a> solver, however this sometimes is not able to obtain satisfactory solutions.
+	</p>
+
 </div>
 
 <script>
