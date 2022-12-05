@@ -72,10 +72,10 @@ body {
 
 .sidenav {
   height: 100%;
-  width: auto;
+  width: auto !important;
   min-width: 200px;
   max-width: 400px;
-  position: fixed;
+  position: fixed !important;
   z-index: 1;
   top: 0;
   left: 0;
