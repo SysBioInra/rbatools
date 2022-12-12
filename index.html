@@ -10,10 +10,13 @@ layout: home_layout
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8676;</a>
 		  <ol type="I">
 			<a href="index.html#sec1">Linear solver support</a>
-			<a href="index.html#sec2">Online tutorial</a>
-			<a href="index.html#sec3">Model availability</a>
-			<a href="index.html#sec4">Authors</a>
-			<a href="index.html#sec4">License</a>
+			<a href="index.html#sec2">Installation</a>
+			<a href="index.html#sec3">Command line tools</a>
+			<a href="index.html#sec4">Online tutorial</a>
+			<a href="index.html#sec5">Tutorials</a>
+			<a href="index.html#sec6">Model availability</a>
+			<a href="index.html#sec7">Authors</a>
+			<a href="index.html#sec8">License</a>
 		  </ol>
 	</div>
 		
@@ -29,18 +32,62 @@ layout: home_layout
 
 	<h4 id="sec1"><b>Linear solver support:</b></h4>
 	<p>
-		RBAtools is based on linear-programming and therefore requires a linear-optimization package. 
+		RBAtools is based on linear-programming and therefore requires a linear optimization package. 
 		We strongly suggest using the (proprietary) <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-optimizer">CPLEX</a> tool, which is available under a free academic license.
 
 		Nonetheless we included functionality with the freely available <a href="https://github.com/biosustain/swiglpk">swiglpk</a> solver, however this sometimes is not able to obtain satisfactory solutions.
 	</p>
 
-	<h4 id="sec2"><b>Online tutorial:</b></h4>
+	<h4 id="sec2"><b>Installation:</b></h4>
+
 	<p>
-		An <a href="https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb">online tutorial</a> is available via <a href="https://mybinder.org">Binder</a>
+		<b>Install this package locally:</b>
+	</p>
+	<p>
+		After cloning this repository, in your terminal navigate into the base directory of rbatools locally on your computer and execute:
+	</p>
+    <code>pip install .</code>
+
+	<p>
+		<b>Install this package from PyPI:</b>
 	</p>
 
-	<h4 id="sec3"><b>Model availability:</b></h4>
+    <code>pip install rbatools</code>
+
+	<h4 id="sec3"><b>Command line tool:</b></h4>
+
+	<p>
+		When installing the rbatools library, command line tools for basic applications are co-installed.
+	</p>
+	<p>
+		<b>run-growth-rate-optimization</b>
+	</p>
+	<p>
+		This tool runs a growth-rate optimisation and stores the obtained results as sbtab.
+		The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
+	</p>
+	<code>run-growth-rate-optimization path/to/rba/model --lp-solver swiglpk --output-dir dedicated/location/of/results</code>
+	<p>
+		<b>generate-sbtab-of-model-for-html</b>
+	</p>
+	<p>
+		This tool imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
+		The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
+		To run it, execute the following command in your terminal:
+	</p>
+	<code>generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results</code>
+
+	<h4 id="sec4"><b>Online tutorial:</b></h4>
+	<p>
+		We generated a <a href="https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb">short tutorial</a> to be accessed online (without any local installations/requirements), hosted by <a href="https://mybinder.org">Binder</a>.
+	</p>
+
+	<h4 id="sec5"><b>Tutorials:</b></h4>
+	<p>
+	Our repository includes various instructional jupyter notebooks, exemplifying the use of rbatools.
+	</p>
+
+	<h4 id="sec6"><b>Model availability:</b></h4>
 	<p>
 		RBA models have already been developed for:
 		<ul>
@@ -53,12 +100,12 @@ layout: home_layout
 		</p>
 	</p>
 
-	<h4 id="sec4"><b>Authors:</b></h4>
+	<h4 id="sec7"><b>Authors:</b></h4>
 	<p>
 	Bodeit, O., Liebermeister, W. and Goelzer A.
 	</p>
 
-	<h4 id="sec5"><b>License:</b></h4>
+	<h4 id="sec8"><b>License:</b></h4>
 	<p>
 	Copyright (c) 2022 INRAE - MaIAGE - France.
 	</p>
