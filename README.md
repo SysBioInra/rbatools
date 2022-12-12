@@ -49,7 +49,7 @@ We provided scripts with basic functionalities of rbatools (same as the command 
 
 #### run_growth_rate_optimization.py
 
-    python run_growth_rate_optimization.py path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
+    python run_growth_rate_optimization.py path/to/rba/model --lp-solver swiglpk --output-dir dedicated/location/of/results
 
 #### generate_sbtab_of_model_for_html.py
 
