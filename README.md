@@ -5,7 +5,7 @@ It includes methods to solve, modify, and analyse RBA models and to export model
 
 ## Usage remark
 
-rbatools is based on linear-programming and therefore requires a linear-optimization package.
+rbatools is based on linear-programming and therefore requires a linear optimization package.
 We strongly suggest using the (proprietary) CPLEX tool, which is available under a free academic license.
 
 Nonetheless we included functionality with the freely available swiglpk solver, however this sometimes is not able to obtain satisfactory solutions.
@@ -94,7 +94,7 @@ In order to lauch the jupyter notebook interface, please execute the following c
 
     jupyter notebook
 
-Once a file browser opens in your web browser, please navigate in to the "/tutorials/jupyter_notebooks" directory and doubleclick one of the following notebooks.
+Once a file browser opens in your web browser, please navigate in to the "/tutorials/jupyter_notebooks" directory and double click one of the following notebooks.
 
 #### Example_workflows_rba_tools.ipynb
 This is a Jupyter notebook with example applications and workflows of rbatools with B.subtilis model.
@@ -109,7 +109,7 @@ Example applications and workflows with E.coli model.
 ## Model availability
 RBA models can be obtained from the repository https://github.com/SysBioInra/Bacterial-RBA-models
 
-The Example_workflow_rba_tools notebook requires the previosly mentioned Bacterial-RBA-models repository to be placed in the same location, as this repository.
+The Example_workflow_rba_tools notebook requires the previously mentioned Bacterial-RBA-models repository to be placed in the same location, as this repository.
 
 ## Authors
 
@@ -119,7 +119,7 @@ Bodeit, O., Liebermeister, W. and Goelzer A.
 
 Copyright (c) 2022 INRAE - MaIAGE - France.
 
-rbatools is free software: you can redistribute it and/or modify
+rbatools is a free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
