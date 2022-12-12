@@ -18,15 +18,51 @@ After cloning this repository, in your terminal navigate into the base directory
 
     pip install .
 
-### Install this from PyPI:
+### Install this package from PyPI:
 
     pip install rbatools
 
-#### --------------------> Please note that installation of rbatools is required to run the tutorial.
+### Command line tools
+
+When installing the rbatools library, command line tools for basic applications are co-installed.
+
+#### run-growth-rate-optimization
+
+This script runs a growth-rate optimisation and stores the obtained results as sbtab.
+The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
+
+    run-growth-rate-optimization path/to/rba/model --lp-solver swiglpk --output-dir dedicated/location/of/results
+
+#### generate-sbtab-of-model-for-html
+
+This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
+The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
+To run it, execute the following command in your terminal:
+
+    generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results
+
+## Running
+
+### scripts
+
+We provided scripts with basic functionalities of rbatools (same as the command line tools) in the subdirectory "scripts":
+
+#### run_growth_rate_optimization.py
+
+    python run_growth_rate_optimization.py path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
+
+#### generate_sbtab_of_model_for_html.py
+
+    python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir dedicated/location/of/results
+
+## Documentation
+
+A full api-reference documentation can be found at: https://sysbioinra.github.io/rbatools/api_ref
+
 
 ## Tutorials
-### MyBinder Tutorial
-We generated a short tutorial, to be provided online with mybinder.
+### Online Tutorial
+We generated a short tutorial to be accessed online (without any local installations/requirements), hosted by MyBinder.
 
 Please  follow this link:
 https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb 
@@ -38,7 +74,9 @@ They are located in this repositories' subdirectory:
 
     /tutorials/jupyter_notebooks
 
-#### --------------------> Please note that prior to running the notebooks, rba models have to be obtained (see section "Model availability") and stored in the same directory as this repository.
+#### !!!!
+#### Please note that prior to running the notebooks rbatools must be installed properly and rba models have to be obtained (see section "Model availability") and stored in the same directory as this repository.  
+#### !!!!
 
 ##### Requirements to run jupyter notebooks:
 The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands in your terminal:
@@ -47,8 +85,10 @@ The jupyter notebooks use additional functionality provided by libraries, not de
 
     pip install ipywidgets
 
-    pip install seaborn
+    pip install matplotlib
 
+    pip install seaborn
+    
 ##### Instructions to run jupyter notebooks:
 In order to lauch the jupyter notebook interface, please execute the following command in your terminal:
 
@@ -65,43 +105,6 @@ This is a Jupyter notebook with example applications on how to access informatio
 #### Example_workflows_rba_tools_Ecoli.ipynb
 Example applications and workflows with E.coli model.
 (Please note significantly longer computation times, than with B.subtilis model)
-
-
-## Running
-
-### scripts
-
-We provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
-
-#### run_growth_rate_optimization.py
-
-This script runs a growth-rate optimisation and stores the obtained results as sbtab.
-The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
-
-    python run_growth_rate_optimization.py path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
-
-#### generate_sbtab_of_model_for_html.py
-
-This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
-The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
-To run it, execute the following command in your terminal:
-
-    python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir dedicated/location/of/results
-
-### run command-line tool
-
-If the rbatools packaage is installed properly, the aforementioned scripts can also be executed as command-line tools
-The respective commands (with identical arguments as scripts) for the terminal are:
-
-    run-growth-rate-optimization path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
-    
-and 
-
-    generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results
-
-## Documentation
-
-A full api-reference documentation can be found at: https://sysbioinra.github.io/rbatools/api_ref
 
 ## Model availability
 RBA models can be obtained from the repository https://github.com/SysBioInra/Bacterial-RBA-models
