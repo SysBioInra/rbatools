@@ -6,7 +6,7 @@ It includes methods to solve, modify, and analyse RBA models and to export model
 ## Usage remark
 
 rbatools is based on linear-programming and therefore requires a linear-optimization package.
-We strongly suggest using the (propriatary) CPLEX tool, which is available under a free academic license.
+We strongly suggest using the (proprietary) CPLEX tool, which is available under a free academic license.
 
 Nonetheless we included functionality with the freely available swiglpk solver, however this sometimes is not able to obtain satisfactory solutions.
 
