@@ -95,6 +95,9 @@ class SessionRBA(object):
         self.ModelStructure = ModelStructureRBA()
         self.ModelStructure.from_files(xml_dir=self.xml_dir)
         self.ModelStructure.export_json(path=self.xml_dir)
+        with open(str(self.xml_dir+'/ModelStructure.json'), 'r') as myfile:
+            data = myfile.read()
+        self.ModelStructure.from_json(inputString=data)
 
     def add_exchange_reactions(self):
         """

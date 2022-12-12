@@ -388,9 +388,7 @@ def record_proto_proteome(RBA_Session, run, Proteinlevels):
     out = []
     for i in list(RBA_Session.ModelStructure.ProteinGeneMatrix['ProtoProteins']):
         row_ind = list(RBA_Session.ModelStructure.ProteinGeneMatrix['ProtoProteins']).index(i)
-        # print(row_ind)
-        nonZero = list(numpy.nonzero(
-            RBA_Session.ModelStructure.ProteinGeneMatrix['Matrix'][row_ind, :])[0])
+        nonZero = list(numpy.nonzero(RBA_Session.ModelStructure.ProteinGeneMatrix['Matrix'][row_ind, :])[0])
         level = 0
         for j in nonZero:
             id = RBA_Session.ModelStructure.ProteinGeneMatrix['Proteins'][j]
