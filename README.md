@@ -28,14 +28,14 @@ When installing the rbatools library, command line tools for basic applications 
 
 #### run-growth-rate-optimization
 
-This script runs a growth-rate optimisation and stores the obtained results as sbtab.
+This tool runs a growth-rate optimisation and stores the obtained results as sbtab.
 The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
 
     run-growth-rate-optimization path/to/rba/model --lp-solver swiglpk --output-dir dedicated/location/of/results
 
 #### generate-sbtab-of-model-for-html
 
-This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
+This tool imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
 The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
 To run it, execute the following command in your terminal:
 
