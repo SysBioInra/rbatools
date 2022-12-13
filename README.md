@@ -10,6 +10,13 @@ We strongly suggest using the (proprietary) CPLEX tool, which is available under
 
 Nonetheless we included functionality with the freely available swiglpk solver, however this sometimes is not able to obtain satisfactory solutions.
 
+## Online demo
+
+We generated a short demo to be accessed online (without any local installations/requirements), hosted by MyBinder.
+
+Please  follow this link:
+https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb 
+
 ## Installation
 
 ### Install this package locally:
@@ -61,11 +68,6 @@ A full api-reference documentation can be found at: https://sysbioinra.github.io
 
 
 ## Tutorials
-### Online Tutorial
-We generated a short tutorial to be accessed online (without any local installations/requirements), hosted by MyBinder.
-
-Please  follow this link:
-https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb 
     
 ### Instructional Jupyter notebooks
 This repository includes various instructional jupyter notebooks, exemplifying the use of rbatools.
