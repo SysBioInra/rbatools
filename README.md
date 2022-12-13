@@ -17,6 +17,8 @@ We generated a short demo to be accessed online (without any local installations
 Please  follow this link:
 https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb 
 
+(Be aware that loading/initiating the page may take a few minutes)
+
 ## Installation
 
 ### Install this package locally:
