@@ -13,8 +13,7 @@ layout: userguide_layout
     <a href="usage.html#sec1">Import as library in Python</a>
     <a href="usage.html#sec2">Scripts</a>
     <a href="usage.html#sec3">Command line interface</a>
-    <a href="usage.html#sec4">Online Tutorial</a>
-    <a href="usage.html#sec5">Instructional Jupyter notebooks</a>
+    <a href="usage.html#sec4">Instructional Jupyter notebooks</a>
   </ol>
 </div>
 
@@ -45,24 +44,31 @@ This script imports an rba-model and exports its component-structure as tabular 
 </p>
 
 <code>python generate_sbtab_of_model_for_html.py path/to/model --output-dir ...</code>
-
-<h4 id="sec3"><b>Command line interface:</b></h4>
-<p>
-If the RBAtools package is installed properly, the aforementioned scripts can also be executed as command-line tools The respective commands (with identical arguments as scripts) for the terminal are:
-This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
-</p>
-<code>run-growth-rate-optimization path/to/model --lp-solver SOLVER_OF_CHOICE --output-dir ...</code>
-<p>
-	And: 
-</p>
-<code>generate-sbtab-of-model-for-html path/to/model --output-dir ...</code>
 	
-<h4 id="sec4"><b>Online Tutorial:</b></h4>
-<p>
-We generated a <a href="https://mybinder.org/v2/gh/obodeit/rbatools_mybinder/main?labpath=tutorial_mybinder.ipynb">short tutorial</a>, to be provided online with mybinder.
-</p>
+<h4 id="sec3"><b>Command line interface:</b></h4>
 
-<h4 id="sec5"><b>Instructional Jupyter notebooks:</b></h4>
+	<p>
+		When installing the rbatools library, command line tools for basic applications are co-installed.
+	</p>
+	<p>
+		<b>run-growth-rate-optimization</b>
+	</p>
+	<p>
+		This tool runs a growth-rate optimisation and stores the obtained results as sbtab.
+		The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
+	</p>
+	<code>run-growth-rate-optimization path/to/rba/model --lp-solver swiglpk --output-dir dedicated/location/of/results</code>
+	<p>
+		<b>generate-sbtab-of-model-for-html</b>
+	</p>
+	<p>
+		This tool imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models)
+		The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
+		To run it, execute the following command in your terminal:
+	</p>
+	<code>generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results</code>
+
+<h4 id="sec4"><b>Instructional Jupyter notebooks:</b></h4>
 <p>
 	Our <a href="https://github.com/SysBioInra/rbatools">repository</a> includes various instructional jupyter notebooks, exemplifying the use of rbatools.
 </p>
