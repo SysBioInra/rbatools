@@ -247,10 +247,10 @@ nav code:hover {
 }
 
 .gototopButton_doc {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 28px;
-  right: 25px;
+  right: 20px;
   z-index: 99;
   cursor: pointer;
   font-size: 50px;
