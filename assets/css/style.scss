@@ -246,10 +246,23 @@ nav code:hover {
   color: #00253E;
 }
 
+.gototopButton_doc {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  z-index: 99;
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: system-ui;
+  color: #00253E;
+}
+
 .gobackButton {
   display: block;
   position: fixed;
-  top: 40px;
+  top: 70px;
   right: 15px;
   z-index: 1;
   cursor: pointer;
