@@ -76,9 +76,9 @@ We provided scripts with basic functionalities of rbatools in the subdirectory "
 #### run_growth_rate_optimization.py
 
 This script runs a growth-rate optimisation and stores the obtained results as sbtab.
-The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk) and the path where the results should be stored. To run it, execute the following command in your terminal:
+The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
 
-    python run_growth_rate_optimization.py path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
+    python run_growth_rate_optimization.py path/to/rba/model --lp-solver swiglpk --output-dir ...
 
 #### generate_sbtab_of_model_for_html.py
 
@@ -86,18 +86,18 @@ This script imports an rba-model and exports its component-structure as tabular 
 The arguments to provide are an rba-model and the optional argument for the path where the results should be stored.
 To run it, execute the following command in your terminal:
 
-    python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir dedicated/location/of/results
+    python generate_sbtab_of_model_for_html.py path/to/rba/model --output-dir ...
 
 ### run command-line tool
 
 If the rbatools packaage is installed properly, the aforementioned scripts can also be executed as command-line tools
 The respective commands (with identical arguments as scripts) for the terminal are:
 
-    run-growth-rate-optimization path/to/rba/model --lp-solver cplex OR swiglpk --output-dir dedicated/location/of/results
+    run-growth-rate-optimization path/to/rba/model --lp-solver swiglpk --output-dir ...
     
 and 
 
-    generate-sbtab-of-model-for-html path/to/rba/model --output-dir dedicated/location/of/results
+    generate-sbtab-of-model-for-html path/to/rba/model --output-dir ...
 
 ## Documentation
 
