@@ -1,0 +1,12 @@
+name: rbatoolsenv
+dependencies:
+  - pip=21.3.1
+  - python=3.6.5
+  - pip:
+    - rbatools=1.0.1
+    - notebook=6.4.10
+    - ipywidgets=7.7.2
+    - matplotlib=3.3.4
+    - seaborn=0.11.1
+
+
