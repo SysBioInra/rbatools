@@ -10,15 +10,48 @@ layout: userguide_layout
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8676;</a>
   <ol type="I">
-    <a href="usage.html#sec1">Import as library in Python</a>
-    <a href="usage.html#sec2">Scripts</a>
+    <a href="usage.html#sec1">Tutorial Jupyter notebooks</a>
+    <a href="usage.html#sec2">Import as library in Python</a>
     <a href="usage.html#sec3">Command line interface</a>
-    <a href="usage.html#sec4">Tutorial Jupyter notebooks</a>
+    <a href="usage.html#sec4">Scripts</a>
   </ol>
 </div>
 
 <div id="main">
-<h4 id="sec1"><b>Import as library in Python:</b></h4>
+<p>
+	RBAtools is a Python library, which can be imported and used in scripts and other applications.
+</p>
+<p>
+	Furthermore we provide selected standard workflows as scripts and command line tools, to be used from one's terminal.
+</p>
+<p>
+	To exemplify the capabilities, give inspirations for applications and introduce the user to working with RBAtools, we created extensive Jupyter notebooks as intructional tutorials.
+</p>
+		
+<h4 id="sec1"><b>Tutorial Jupyter notebooks:</b></h4>
+<p>
+	Our <a href="https://github.com/SysBioInra/rbatools">repository</a> includes various instructional jupyter notebooks, exemplifying the use of rbatools.
+</p>
+<p>
+  Please note that the Jupyter notebooks require additional dependencies, not co-installed with rbatools.
+</p>
+<p>
+  Those can be installed with the following commands:
+</p>
+<p>
+  <code>pip install notebook</code>
+</p>
+<p>
+  <code>pip install ipywidgets</code>
+</p>
+<p>
+  <code>pip install matplotlib</code>
+</p>
+<p>
+  <code>pip install seaborn</code>
+</p>
+
+<h4 id="sec2"><b>Import as library in Python:</b></h4>
 <p>
 When used in own Python code, RBAtools can be imported as follows:
 </p>
@@ -29,26 +62,6 @@ When used in own Python code, RBAtools can be imported as follows:
   For instructions on usage, please refer to our <a href="usage.html#sec4">tutorials</a> and <a href="api_ref.html">API reference</a>.
 </p>
   
-<h4 id="sec2"><b>Scripts:</b></h4>
-<p>
-We provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
-</p>
-<p>
-<b>run_growth_rate_optimization.py:</b>
-
-This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
-</p>
-
-<code>python run_growth_rate_optimization.py path/to/model --lp-solver swiglpk --output-dir ...</code>
-
-<p>
-	<b>generate_sbtab_of_model_for_html.py:</b>
-
-This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models) The arguments to provide are an rba-model and the optional argument for the path where the results should be stored. To run it, execute the following command in your terminal:
-</p>
-
-<code>python generate_sbtab_of_model_for_html.py path/to/model --output-dir ...</code>
-	
 <h4 id="sec3"><b>Command line interface:</b></h4>
 
 	<p>
@@ -72,28 +85,26 @@ This script imports an rba-model and exports its component-structure as tabular 
 	</p>
 	<code>generate-sbtab-of-model-for-html path/to/rba/model --output-dir ...</code>
 
-<h4 id="sec4"><b>Tutorial Jupyter notebooks:</b></h4>
+<h4 id="sec4"><b>Scripts:</b></h4>
 <p>
-	Our <a href="https://github.com/SysBioInra/rbatools">repository</a> includes various instructional jupyter notebooks, exemplifying the use of rbatools.
+We provided scripts with basic functionalities of rbatools in the subdirectory "scripts":
 </p>
 <p>
-  Please note that the Jupyter notebooks require additional dependencies, not co-installed with rbatools.
+<b>run_growth_rate_optimization.py:</b>
+
+This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
 </p>
+
+<code>python run_growth_rate_optimization.py path/to/model --lp-solver swiglpk --output-dir ...</code>
+
 <p>
-  Those can be installed with the following commands:
+	<b>generate_sbtab_of_model_for_html.py:</b>
+
+This script imports an rba-model and exports its component-structure as tabular sbtab (as presented on https://rba.inrae.fr/models) The arguments to provide are an rba-model and the optional argument for the path where the results should be stored. To run it, execute the following command in your terminal:
 </p>
-<p>
-  <code>pip install notebook</code>
-</p>
-<p>
-  <code>pip install ipywidgets</code>
-</p>
-<p>
-  <code>pip install matplotlib</code>
-</p>
-<p>
-  <code>pip install seaborn</code>
-</p>
+
+<code>python generate_sbtab_of_model_for_html.py path/to/model --output-dir ...</code>
+	
 </div>
 
 <script>
