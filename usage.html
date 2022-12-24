@@ -79,8 +79,63 @@ layout: userguide_layout
 				</p>
 				<ul>
 					<p>
-						<i>Here we initiate an rbatools.rba_session.SessionRBA with a model of B.subtilis. Variable 'model_filename' specifies where the RBA model is located and should be changed by the user. 
-							Upon initiation of session explicit exchange reactions for external metabolites are added, to facilitate conveinient acces to metabolite exchange rates.
+						<i>
+							Here we initiate an rbatools session with a model of B.subtilis. 
+						</i>
+					</p>
+				</ul>
+				<p>
+					<i><b>Simulation-results handling:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i> Here we perform simple simulation runs and record the corresponding set of parameters and results.
+							After we have performed all desired simulations (and did the corresponding recordings) we store them. 
+							From those objects the results and parameters can be exported into various formats.
+						</i>
+					</p>
+				</ul>
+				<p>
+					<i><b>Simulation-results export:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i>
+							Here we export results and parameters into various formats, from the previously written data.
+						</i>
+					</p>
+				</ul>
+			</ul>
+			<li> Investigating (growth-optimal) cellular states: </li>
+			<ul>
+				<p>
+					<i><b>Glucose screen:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i>
+							Here we iterate through predefined glucose concentrations (glcs) and determine the corresponding maximum growth-rates and optimal configuration of exchange fluxes. 
+						</i>
+					</p>
+				</ul>
+				<p>
+					<i><b>Search for minimal required glucose concentration at different growth rates:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i>
+							Here we iterate through a predefined list of growth rates and determine the corresponding required (minimal) concentration of glucose (necessary to obtain the specified growth rate).
+						</i>
+					</p>
+				</ul>
+				<p>
+					<i><b>Derive Biomass functions:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i>
+							Here we derive biomass-functions for different growth-rates, as used as objectives in FBA-modelling, from the RBA-model. 
+							Since RBA, unlike FBA, allows a varying biomass-compostion with growth rate; we would like to provide the user with a method to also impose growth-rate specific objectives for FBA. 
 						</i>
 					</p>
 				</ul>
