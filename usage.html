@@ -89,9 +89,8 @@ layout: userguide_layout
 				</p>
 				<ul>
 					<p>
-						<i> Here we perform simple simulation runs and record the corresponding set of parameters and results.
-							After we have performed all desired simulations (and did the corresponding recordings) we store them. 
-							From those objects the results and parameters can be exported into various formats.
+						<i> 
+							Here we perform simple simulation runs and record the corresponding set of parameters and results.
 						</i>
 					</p>
 				</ul>
@@ -101,12 +100,12 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we export results and parameters into various formats, from the previously written data.
+							Here we export results and parameters into various formats, for inspection and visulaization.
 						</i>
 					</p>
 				</ul>
 			</ul>
-			<li> Investigating (growth-optimal) cellular states: </li>
+			<li> Investigating (growth-optimal) cellular configurations: </li>
 			<ul>
 				<p>
 					<i><b>Glucose screen:</b></i>
@@ -114,7 +113,7 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we iterate through predefined glucose concentrations (glcs) and determine the corresponding maximum growth-rates and optimal configuration of exchange fluxes. 
+							Here we determine the maximum growth-rates and optimal cellular configurations, corresponding to different concentrations of glucose in the medium. 
 						</i>
 					</p>
 				</ul>
@@ -124,7 +123,8 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we iterate through a predefined list of growth rates and determine the corresponding required (minimal) concentration of glucose (necessary to obtain the specified growth rate).
+							Here we and determine the required (minimal) concentration of glucose, necessary to obtain specified growth rates.
+							This analysis approximates the prediction of residual glucose concentration in chemostat cultures, at specified dilution rates.
 						</i>
 					</p>
 				</ul>
@@ -134,8 +134,33 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we derive biomass-functions for different growth-rates, as used as objectives in FBA-modelling, from the RBA-model. 
-							Since RBA, unlike FBA, allows a varying biomass-compostion with growth rate; we would like to provide the user with a method to also impose growth-rate specific objectives for FBA. 
+							Here we derive biomass-functions (correspunding to cellular composition) for different growth-rates, as used as objectives in FBA-modelling, from the RBA-model. 
+						</i>
+					</p>
+				</ul>
+			</ul>
+			<li> Investigating the feasible space and trade-offs of cellular variables: </li>
+			<ul>
+				<p>
+					<i><b>Resource Variability Analysis:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i>
+							Here we determine the feasible range of cellular variables 
+							(in this case exchange-fluxes of glucose and oxygen), 
+							for all growth rates between 0 and the maximum 
+							(achievable in specified medium).
+						</i>
+					</p>
+				</ul>
+				<p>
+					<i><b>Determination of maximum production capacity of metabolic compounds:</b></i>
+				</p>
+				<ul>
+					<p>
+						<i>
+							...
 						</i>
 					</p>
 				</ul>
