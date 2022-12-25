@@ -130,7 +130,7 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we determine the maximum growth-rates and optimal cellular configurations, corresponding to different concentrations of glucose in the medium. 
+							Here we determine the maximum growth rates and optimal cellular configurations, corresponding to different concentrations of glucose in the medium. 
 						</i>
 					</p>
 				</ul>
@@ -151,7 +151,7 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we derive biomass-functions (correspunding to cellular composition) for different growth-rates, as used as objectives in FBA-modelling, from the RBA-model. 
+							Here we derive biomass-functions (correspunding to cellular composition) for different growth rates, as used as objectives in FBA-modelling, from the RBA-model. 
 						</i>
 					</p>
 				</ul>
@@ -202,7 +202,7 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							...
+							Here we apply noise to all enzyme efiiciencies and determine the corresponding growth-optimal state.
 						</i>
 					</p>
 				</ul>
@@ -213,7 +213,7 @@ layout: userguide_layout
 					<p>
 						<i>
 							Here we screen the impact of modulation of ribosome-capacity on 
-							the maximum growth-rate at different glucose concentrations.
+							the maximum growth rate at different glucose concentrations.
 						</i>
 					</p>
 				</ul>
@@ -223,8 +223,8 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we perform local sensitivity analysis of maximum growth-rate on ribosome- and glucose-uptake (PTSG-system) efficiency 
-							at different glucose concentrations. Local sensitivity is represented as the partial derivative of maximum growth-rate vs. model-parameter values at wild-type.
+							Here we perform local sensitivity analysis of maximum growth rate on ribosome- and glucose-uptake (PTSG-system) efficiency 
+							at different glucose concentrations. Local sensitivity is represented as the partial derivative of maximum growth rate vs. model-parameter values at wild-type.
 						</i>
 					</p>
 				</ul>
@@ -245,7 +245,7 @@ layout: userguide_layout
 				<ul>
 					<p>
 						<i>
-							Here we compare the growth-rates predicted with FBA, once with a fixed literature-derived biomass function and once with the biomass function, derived from the RBA model.
+							Here we compare the growth rates predicted with FBA, once with a fixed literature-derived biomass function and once with the biomass function, derived from the RBA model.
 					</p>
 				</ul>
 			</ul>
@@ -272,7 +272,7 @@ When used in own Python code, RBAtools can be imported as follows:
 		<b>run-growth-rate-optimization</b>
 	</p>
 	<p>
-		This tool runs a growth-rate optimisation and stores the obtained results as sbtab.
+		This tool runs a growth rate optimisation and stores the obtained results as sbtab.
 		The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
 	</p>
 	<code>run-growth-rate-optimization path/to/rba/model --lp-solver swiglpk --output-dir ...</code>
@@ -293,7 +293,7 @@ We provided scripts with basic functionalities of rbatools in the subdirectory "
 <p>
 <b>run_growth_rate_optimization.py:</b>
 
-This script runs a growth-rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
+This script runs a growth rate optimisation and stores the obtained results as sbtab. The arguments to provide are an rba-model and the optional arguments for the used lp-solver (default: swiglpk, alternative: cplex) and the path where the results should be stored. To run it, execute the following command in your terminal:
 </p>
 
 <code>python run_growth_rate_optimization.py path/to/model --lp-solver swiglpk --output-dir ...</code>
