@@ -11,7 +11,11 @@ layout: userguide_layout
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8676;</a>
   <ol type="I">
     <a href="usage.html#sec1">Tutorial Jupyter notebooks</a>
-    <a href="usage.html#sec2">Import as library in Python</a>
+    <ol>
+		<a href="usage.html#sec1.1">Programmatic access to model components</a>
+		<a href="usage.html#sec1.2">Example applications</a>
+	</ol>
+	<a href="usage.html#sec2">Import as library in Python</a>
     <a href="usage.html#sec3">Command line interface</a>
     <a href="usage.html#sec4">Scripts</a>
   </ol>
@@ -65,12 +69,12 @@ layout: userguide_layout
 	Once a file browser opens in your web browser, please navigate in to the "/tutorials/jupyter_notebooks" sub-directory (in your local clone of the rbatools repository) and doubleclick one of the following notebooks.
 </p>
 
-<h5><b>Model_components_information_access.ipynb:</b></h5>
+<h5 id="sec1.1"><b>Model_components_information_access.ipynb:</b></h5>
 <p>
 	This is a Jupyter notebook with example applications on how to access information on model-components and their relationships in the B.subtilis model.
 </p>
 
-<h5><b>Example_workflows_rba_tools.ipynb:</b></h5>
+<h5 id="sec1.2"> <b>Example_workflows_rba_tools.ipynb:</b></h5>
 <p>
 	This is a Jupyter notebook with example applications and workflows of rbatools with B.subtilis model.
 	<p>
@@ -239,10 +243,6 @@ layout: userguide_layout
 				</ul>
 			</ul>
 		</ul>
-</p>
-<h5><b>Example_workflows_rba_tools_Ecoli.ipynb:</b></h5>
-<p>
-	Example applications and workflows with E.coli model. (Please note significantly longer computation times, than with B.subtilis model)
 </p>
 
 <h4 id="sec2"><b>Import as library in Python:</b></h4>
