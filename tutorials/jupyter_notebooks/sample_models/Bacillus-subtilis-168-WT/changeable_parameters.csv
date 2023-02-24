@@ -1,0 +1,10 @@
+Parameter,Type
+M_glc,medium_composition
+M_o2,medium_composition
+ribosome_capacity,process_efficiency
+chaperone_efficiency_LM,process_efficiency
+TptsG_efficiency,enzyme_efficiency
+maintenance_atp,target_flux
+flagella_proton_flux,target_flux
+Cell_membrane_density,compartment_density
+Cytoplasm_density,compartment_density
