@@ -39,9 +39,7 @@ They are located in this repositories' subdirectory:
     /tutorials/jupyter_notebooks
 
 #### --------------------><--------------------
-#### We included a sample model in the tutorial folder and added a loader module, 
-#### to import it into the notebook. However we only included the model of B.Subtilis.
-#### In order to run the other models, we suggest to obtain them from our repository. 
+#### We included a sample model in the tutorial folder and added a loader module, to import it into the notebook. However we only included the model of B.Subtilis. In order to run the other models, we suggest to obtain them from our repository. 
 #### (see section "Model availability") and stored in the same directory as this repository.
 
 ##### Requirements to run jupyter notebooks:
