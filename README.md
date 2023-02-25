@@ -39,8 +39,7 @@ They are located in this repositories' subdirectory:
     /tutorials/jupyter_notebooks
 
 #### --------------------><--------------------
-#### We included a sample model in the tutorial folder and added a loader module, to import it into the notebook. However we only included the model of B.Subtilis. In order to run the other models, we suggest to obtain them from our repository. 
-#### (see section "Model availability") and stored in the same directory as this repository.
+#### We included a sample model in the tutorial folder and added a loader module, to import it into the notebook. However we only included the model of B.Subtilis. In order to run the other models, we suggest to obtain them from our repository. (see section "Model availability") and stored in the same directory as this repository.
 
 ##### Requirements to run jupyter notebooks:
 The jupyter notebooks use additional functionality provided by libraries, not defined as dependencies of rbatools. The user therefore should install those to be able to run the tutorial-notebooks. Please execute the following commands in your terminal:
