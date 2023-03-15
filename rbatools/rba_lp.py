@@ -127,6 +127,7 @@ class LinearProblem(ProblemMatrix):
         ModifiedProblem : boolean
             Whether problem has been modifed. If false own lp components are fully replaced by input, if rows and  col names are identical .
         """
+        matrix.map_indices()
         ## Check if indices to update are provided, if not use all indices ##
         if Ainds is None:
             Ainds = list(itertools.product(matrix.row_names, matrix.col_names))
