@@ -1154,7 +1154,7 @@ class _SolverCPLEX(_Solver):
             Dictionary with constraint-IDs as keys and
             type identification-characters as values.
         """
-        return(dict(zip(constraints, [self.cplexLP.linear_constraints.get_senses(self.rowIndicesMap[c]) for c in constraints])))
+        return(dict(zip(constraints, [self.cplexLP.linear_constraints.get_senses(c) for c in constraints])))
 
     def set_constraint_types(self, inputDict: dict):
         """
