@@ -27,7 +27,7 @@ class ProblemMatrix(object):
     b : numpy.array
         Righthandside of Constraint Matrix
     row_signs : list
-        Type of constraints ('E' for equality 'L' for lower-or-equal inequality) --> Ax=b or Ax<=b
+        Type of constraints ('E' for equality, 'L' for lower-or-equal inequality), 'G' for larger-or-equal inequality) --> Ax=b or Ax<=b or Ax>=b
     f : numyp.array
         Objective function linear get_coefficients
     LB : numpy.array
