@@ -42,7 +42,7 @@ class LinearProblem(ProblemMatrix):
     b : numpy.array
         Righthandside of Constraint Matrix
     row_signs : list
-        Type of constraints ('E' for equality 'L' for lower-or-equal inequality) --> Ax=b or Ax<=b
+        Type of constraints ('E' for equality, 'L' for lower-or-equal inequality), 'G' for larger-or-equal inequality) --> Ax=b or Ax<=b or Ax>=b
     f : numyp.array
         Objective function linear get_coefficients
     LB : numpy.array
@@ -127,6 +127,7 @@ class LinearProblem(ProblemMatrix):
         ModifiedProblem : boolean
             Whether problem has been modifed. If false own lp components are fully replaced by input, if rows and  col names are identical .
         """
+        matrix.map_indices()
         ## Check if indices to update are provided, if not use all indices ##
         if Ainds is None:
             Ainds = list(itertools.product(matrix.row_names, matrix.col_names))
@@ -1154,7 +1155,7 @@ class _SolverCPLEX(_Solver):
             Dictionary with constraint-IDs as keys and
             type identification-characters as values.
         """
-        return(dict(zip(constraints, [self.cplexLP.linear_constraints.get_senses(self.rowIndicesMap[c]) for c in constraints])))
+        return(dict(zip(constraints, [self.cplexLP.linear_constraints.get_senses(c) for c in constraints])))
 
     def set_constraint_types(self, inputDict: dict):
         """
