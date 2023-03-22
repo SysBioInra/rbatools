@@ -125,7 +125,6 @@ class SessionRBA(object):
                     for i in RemainingReactions]+[-10000]*len(Mets_external))
         UBs = list([self.Problem.LP.UB[self.Problem.LP.col_names.index(i)]
                     for i in RemainingReactions]+[10000]*len(Mets_external))
-        b = [0]*len(Mets_external)
         f = list([self.Problem.LP.f[self.Problem.LP.col_names.index(i)]
                   for i in RemainingReactions]+[0]*len(Mets_external))
 
