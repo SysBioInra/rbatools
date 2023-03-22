@@ -38,9 +38,9 @@ class ProblemMatrix(object):
         Names of constraints
     col_names : list
         Names of decision-variables
-    rowIndicesMap : dict
+    row_indices_map : dict
         Dictionary mapping constraint names to their numeric index (generated automatically)
-    colIndicesMap : dict
+    col_indices_map : dict
         Dictionary mapping variable names to their numeric index (generated automatically)
     """
 
@@ -142,13 +142,13 @@ class ProblemMatrix(object):
 
     def map_indices(self):
         """
-        Generates rowIndicesMap and colIndicesMap from attributes.
+        Generates row_indices_map and col_indices_map from attributes.
 
-        rowIndicesMap = Dictionary: {'constraint_name':index,...}
-        colIndicesMap = Dictionary: {'variable_name':index,...}
+        row_indices_map = Dictionary: {'constraint_name':index,...}
+        col_indices_map = Dictionary: {'variable_name':index,...}
         """
-        self.rowIndicesMap = dict(zip(self.row_names, list(range(len(self.row_names)))))
-        self.colIndicesMap = dict(zip(self.col_names, list(range(len(self.col_names)))))
+        self.row_indices_map = dict(zip(self.row_names, list(range(len(self.row_names)))))
+        self.col_indices_map = dict(zip(self.col_names, list(range(len(self.col_names)))))
 
     def a_to_lil(self):
         """
