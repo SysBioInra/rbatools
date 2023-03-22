@@ -532,7 +532,8 @@ class ProblemRBA(object):
             tuples = [inputTuples]
         else:
             raise InputError('Input-argument not tuple or list of tuples')
-        return(self.LP.get_problem_coefficients(inputTuples=tuples))
+        coefficients=self.LP.get_problem_coefficients(inputTuples=[(self.LP.row_indices_map[i[0]],self.LP.col_indices_map[i[1]]) for i in tuples])
+        return({(self.LP.row_names[i[0]],self.LP.col_names[i[1]]):coefficients[i] for i in coefficients.keys()})
 
     def set_problem_coefficients(self, inputDict: dict):
         """
@@ -545,17 +546,7 @@ class ProblemRBA(object):
             and new numeric values as values.
             ({('row1','col1'):42,('row2','col2'):9000, ...}).
         """
-
-        variables = []
-        constraints = []
-        coefficients = []
-        Changes = []
-        for const in list(inputDict.keys()):
-            for var in list(inputDict[const].keys()):
-                constraints.append(const)
-                variables.append(var)
-                coefficients.append(numpy.float64(inputDict[const][var]))
-        self.LP.set_problem_coefficients(input=list(zip(constraints, variables, coefficients)))
+        self.LP.set_problem_coefficients(input={(self.LP.row_indices_map[i[0]],self.LP.col_indices_map[i[1]]):inputDict[i] for i in inputDict.keys()})
 
     def get_ub(self, variables: Union[list,str] = []) -> dict:
         """
