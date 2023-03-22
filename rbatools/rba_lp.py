@@ -53,9 +53,9 @@ class LinearProblem(ProblemMatrix):
         Names of constraints
     col_names : list
         Names of decision-variables
-    rowIndicesMap : dict
+    row_indices_map : dict
         Dictionary mapping constraint names to their numeric index (generated automatically)
-    colIndicesMap : dict
+    col_indices_map : dict
         Dictionary mapping variable names to their numeric index (generated automatically)
     lp_solver : str
         Selected linear problem solver.
@@ -151,10 +151,10 @@ class LinearProblem(ProblemMatrix):
             ### If old and new matrix do not have same elements and order of indices ###
             ## Find elements (index pairs) which are in the old, as well in th new matrix. ##
             x1, x2 = zip(*Ainds)
-            rowsOld = tuple([self.rowIndicesMap[i] for i in x1])
-            colsOld = tuple([self.colIndicesMap[i] for i in x2])
-            rowsNew = tuple([matrix.rowIndicesMap[i] for i in x1])
-            colsNew = tuple([matrix.colIndicesMap[i] for i in x2])
+            rowsOld = tuple([self.row_indices_map[i] for i in x1])
+            colsOld = tuple([self.col_indices_map[i] for i in x2])
+            rowsNew = tuple([matrix.row_indices_map[i] for i in x1])
+            colsNew = tuple([matrix.col_indices_map[i] for i in x2])
 
             newA = csc_matrix(matrix.A)
             oldA = csc_matrix(self.A)
@@ -167,15 +167,15 @@ class LinearProblem(ProblemMatrix):
                 if matrix.row_names == self.row_names:
                     ## If old and new LPs have same rows and row-order ##
                     #Find numeric indices of rows to update (same for old and new matrix)#
-                    rowsNew = [matrix.rowIndicesMap[i] for i in Binds]
+                    rowsNew = [matrix.row_indices_map[i] for i in Binds]
                     #Overwrite old elements at row-indices with corresponding new elements#
                     for bind in list(range(len(rowsNew))):
                         self.b[rowsNew[bind]] = matrix.b[rowsNew[bind]]
                 else:
                     x = [i for i in Binds if i in matrix.row_names and i in self.row_names]
                     #Find numeric indices of rows to update (for old and new matrix individually)#
-                    rowsNew = [matrix.rowIndicesMap[i] for i in x]
-                    rowsOld = [self.rowIndicesMap[i] for i in x]
+                    rowsNew = [matrix.row_indices_map[i] for i in x]
+                    rowsOld = [self.row_indices_map[i] for i in x]
                     #Overwrite old elements at row-indices with corresponding new elements#
                     for bind in list(range(len(rowsNew))):
                         self.b[rowsOld[bind]] = matrix.b[rowsNew[bind]]
@@ -183,23 +183,23 @@ class LinearProblem(ProblemMatrix):
             ## Update Constraint type ##
             if len(CTinds) > 0:
                 if matrix.row_names == self.row_names:
-                    rowsNew = [matrix.rowIndicesMap[i] for i in CTinds]
+                    rowsNew = [matrix.row_indices_map[i] for i in CTinds]
                     self.row_signs = matrix.row_signs
                 else:
                     for row in CTinds:
-                        self.row_signs[self.rowIndicesMap[row]] = matrix.row_signs[matrix.rowIndicesMap[row]]
+                        self.row_signs[self.row_indices_map[row]] = matrix.row_signs[matrix.row_indices_map[row]]
 
             ## Update LB##
             if len(LBinds) > 0:
                 oLB = numpy.array(self.LB)
                 nLB = numpy.array(matrix.LB)
                 if matrix.col_names == self.col_names:
-                    colsNew = [matrix.colIndicesMap[i] for i in LBinds]
+                    colsNew = [matrix.col_indices_map[i] for i in LBinds]
                     oLB[colsNew] = nLB[colsNew]
                 else:
                     x = [i for i in LBinds if i in matrix.col_names and i in self.col_names]
-                    colsOld = [self.colIndicesMap[i] for i in x]
-                    colsNew = [matrix.colIndicesMap[i] for i in x]
+                    colsOld = [self.col_indices_map[i] for i in x]
+                    colsNew = [matrix.col_indices_map[i] for i in x]
                     oLB[colsOld] = nLB[colsNew]
                 self.LB = oLB
 
@@ -208,12 +208,12 @@ class LinearProblem(ProblemMatrix):
                 oUB = numpy.array(self.UB)
                 nUB = numpy.array(matrix.UB)
                 if matrix.col_names == self.col_names:
-                    colsNew = [matrix.colIndicesMap[i] for i in UBinds]
+                    colsNew = [matrix.col_indices_map[i] for i in UBinds]
                     oUB[colsNew] = nUB[colsNew]
                 else:
                     x = [i for i in UBinds if i in matrix.col_names and i in self.col_names]
-                    colsOld = [self.colIndicesMap[i] for i in x]
-                    colsNew = [matrix.colIndicesMap[i] for i in x]
+                    colsOld = [self.col_indices_map[i] for i in x]
+                    colsNew = [matrix.col_indices_map[i] for i in x]
                     oUB[colsOld] = nUB[colsNew]
                 self.UB = oUB
 
@@ -266,21 +266,21 @@ class LinearProblem(ProblemMatrix):
         compoundProblem.row_signs[0:oldA.shape[0]] = copy.deepcopy(self.row_signs)
         for i in matrix.row_names:
             for j in matrix.col_names:
-                NewMatrixRowIndex = matrix.rowIndicesMap[i]
-                NewMatrixColIndex = matrix.colIndicesMap[j]
-                CompoundMatrixRowIndex = compoundProblem.rowIndicesMap[i]
-                CompoundMatrixColIndex = compoundProblem.colIndicesMap[j]
+                NewMatrixRowIndex = matrix.row_indices_map[i]
+                NewMatrixColIndex = matrix.col_indices_map[j]
+                CompoundMatrixRowIndex = compoundProblem.row_indices_map[i]
+                CompoundMatrixColIndex = compoundProblem.col_indices_map[j]
                 compoundProblem.A[CompoundMatrixRowIndex,
                                   CompoundMatrixColIndex] = matrix.A[NewMatrixRowIndex, NewMatrixColIndex]
 
         ## Find numeric indices of new-matrix elements in the new matrix ##
-        NewMatrixRowIndices = tuple([matrix.rowIndicesMap[i] for i in matrix.row_names])
-        NewMatrixColIndices = tuple([matrix.colIndicesMap[i] for i in matrix.col_names])
+        NewMatrixRowIndices = tuple([matrix.row_indices_map[i] for i in matrix.row_names])
+        NewMatrixColIndices = tuple([matrix.col_indices_map[i] for i in matrix.col_names])
 
         ## Find numeric indices of new-matrix elements in the compound matrix ##
-        CompoundMatrixRowIndices = tuple([compoundProblem.rowIndicesMap[i]
+        CompoundMatrixRowIndices = tuple([compoundProblem.row_indices_map[i]
                                           for i in matrix.row_names])
-        CompoundMatrixColIndices = tuple([compoundProblem.colIndicesMap[i]
+        CompoundMatrixColIndices = tuple([compoundProblem.col_indices_map[i]
                                           for i in matrix.col_names])
 
         ## Transfer new-matrix elements to compound problem ##
@@ -547,17 +547,21 @@ class LinearProblem(ProblemMatrix):
         """
         return({tuple:self.A.toarray()[tuple[0],tuple[1]] for tuple in inputTuples})
 
-    def set_problem_coefficients(self, input: list):
+    def set_problem_coefficients(self, input: dict):
         """
         Sets coefficients in constraint matrix.
 
         Parameters
         ----------
-        inputDict : dict
+        input : dict
             Dictionary with index tuples as keys and
             matrix coefficients as values.
         """
-        self._lp_solver.set_problem_coefficients(input=input)
+        A_array=self.A.toarray()
+        for coordinate_tuple in input.keys():
+            A_array[coordinate_tuple[0],coordinate_tuple[1]]=input[coordinate_tuple]
+        self.A=coo_matrix(A_array)
+        self.build_lp()
 
     def get_ub(self,variables):
         """
@@ -768,15 +772,8 @@ class _Solver(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def set_problem_coefficients(self, input: list):
+    def set_problem_coefficients(self):
         """
-        Sets coefficients in constraint matrix.
-
-        Parameters
-        ----------
-        inputDict : dict
-            Dictionary with index tuples as keys and
-            matrix coefficients as values.
         """
         pass
 
@@ -994,21 +991,10 @@ class _SolverGLPK(_Solver):
             glp_set_row_bnds(self.glpkLP, self.row_names.index(row)+1, row_sign_mapping[self.row_signs[self.row_names.index(row)]], float(inputDict[row]), float(inputDict[row])) #bounds the first row between lb 0 and ub 100
             self.b[self.row_names.index(row)]=float(inputDict[row])
 
-    def set_problem_coefficients(self, input: list):
+    def set_problem_coefficients(self):
         """
-        Sets coefficients in constraint matrix.
-
-        Parameters
-        ----------
-        inputDict : dict
-            Dictionary with index tuples as keys and
-            matrix coefficients as values.
         """
-        A_array=self.A.toarray()
-        for tuple in input:
-            A_array[tuple[0],tuple[1]]=tuple[2]
-        self.A=coo_matrix(A_array)
-        self.build_glpk_lp()
+        pass
 
     def set_lb(self, inputDict: dict):
         """
@@ -1201,18 +1187,10 @@ class _SolverCPLEX(_Solver):
             ##Transfer changes to rbatools.LP object##
             self.b = self.cplexLP.linear_constraints.get_rhs()
 
-    def set_problem_coefficients(self, input: list):
+    def set_problem_coefficients(self):
         """
-        Sets coefficients in constraint matrix.
-
-        Parameters
-        ----------
-        inputDict : dict
-            Dictionary with index tuples as keys and
-            matrix coefficients as values.
         """
-        self.cplexLP.linear_constraints.set_coefficients(input)
-        self.A = _auxiliary_functions.convert_cplex_matrix_to_sparse(self)
+        pass
 
     def set_lb(self, inputDict: dict):
         """
