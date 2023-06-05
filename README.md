@@ -113,6 +113,11 @@ The Example_workflow_rba_tools notebook requires the previosly mentioned Bacteri
 
 Bodeit, O., Liebermeister, W. and Goelzer A.
 
+## Citation
+
+If you use RBAtools for scientific publications, please cite our article: Bodeit O., Ben Samir I., Karr J.R., Liebermeister W., Goelzer A. (2023), "RBAtools: a programming interface for Resource Balance Analysis models", Bioinformatics Advances 3 (2023). https://doi.org/10.1093/bioadv/vbad056
+
+
 ## License
 
 Copyright (c) 2022 INRAE - MaIAGE - France.
