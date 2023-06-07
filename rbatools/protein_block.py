@@ -125,8 +125,10 @@ def _mine_uniprot_file(UniprotData, IDmap, protein):
     name = ''
     length = numpy.nan
     mass = numpy.nan
-    IDlist = [' ' + m + ' ' + str(n) + ' ' for m,
-              n in zip(list(UniprotData['Entry']), list(UniprotData['Gene names']))]
+    if 'Gene names' in list(UniprotData.columns):
+        IDlist = [' ' + m + ' ' + str(n) + ' ' for m,n in zip(list(UniprotData['Entry']), list(UniprotData['Gene names']))]
+    elif 'Gene Names' in list(UniprotData.columns):
+        IDlist = [' ' + m + ' ' + str(n) + ' ' for m,n in zip(list(UniprotData['Entry']), list(UniprotData['Gene Names']))]
     ProteinRowList = [i for i, s in enumerate(IDlist) if str(' ' + protein + ' ') in s]
     if len(ProteinRowList) > 0:
         ProteinRow = ProteinRowList[0]
@@ -168,11 +170,12 @@ def _get_protein_composition(model, protein):
     numberAA = 0
     MacroMolecules = model.proteins.macromolecules._elements
     for a in range(len(MacroMolecules[protein].composition._elements)):
-        out[MacroMolecules[protein].composition._elements[a].component] = int(
-            round(MacroMolecules[protein].composition._elements[a].stoichiometry, 3))  # round(...,3) added#
-        numberAA += MacroMolecules[protein].composition._elements[a].stoichiometry
+        component_id=MacroMolecules[protein].composition._elements[a].component
+        if model.proteins.components._elements_by_id[component_id].type in ['amino_acid']:
+            out[component_id] = MacroMolecules[protein].composition._elements[a].stoichiometry  # round(...,3) added#
+            numberAA += MacroMolecules[protein].composition._elements[a].stoichiometry
     out = {'AAcomp': out,
-           'AAnum': int(numberAA)}
+           'AAnum': numberAA}
     return(out)
 
 
