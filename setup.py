@@ -69,7 +69,7 @@ setup(name='rbatools',
     install_requires=[
         'rbapy',
         'swiglpk',
-        'sbtab>=1.0.6',
+        'sbtab==1.0.6',
         'jxmlease',
         'urllib3',
     ],
